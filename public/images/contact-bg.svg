@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Krzyż na ścieżce pielgrzymów">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12233F"/>
+      <stop offset="70%" stop-color="#3A3F55"/>
+      <stop offset="100%" stop-color="#C8913A"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FAF7F2" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FAF7F2" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#sky)"/>
+  <circle cx="200" cy="180" r="90" fill="#FAF7F2" opacity="0.85"/>
+  <path d="M0 640 L800 560 L800 1000 L0 1000 Z" fill="#5A4A32"/>
+  <path d="M0 660 L800 585" stroke="#C8913A" stroke-width="10" opacity="0.7" fill="none"/>
+  <g stroke="#0B1730" stroke-width="18" stroke-linecap="round" opacity="0.9">
+    <line x1="330" y1="420" x2="330" y2="640"/>
+    <line x1="255" y1="480" x2="405" y2="480"/>
+  </g>
+  <g fill="#0B1730" opacity="0.45">
+    <ellipse cx="180" cy="800" rx="26" ry="10"/>
+    <ellipse cx="280" cy="840" rx="26" ry="10"/>
+    <ellipse cx="380" cy="800" rx="26" ry="10"/>
+    <ellipse cx="480" cy="850" rx="26" ry="10"/>
+    <ellipse cx="580" cy="810" rx="26" ry="10"/>
+  </g>
+  <rect width="800" height="1000" fill="url(#fade)"/>
+</svg>

@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* Design tokens – St. Christopher Pilgrimages and Travel */
+@theme {
+  /* Kolory */
+  --color-navy-900: #0b1730;
+  --color-navy-800: #12233f;
+  --color-gold-500: #c8913a;
+  --color-gold-600: #b07a25;
+  --color-cream: #faf7f2;
+  --color-ink: #1b2433;
+  --color-muted: #6b7280;
+  --color-border: #e7e2d9;
+
+  /* Fonty (zmienne ustawiane przez next/font w layout.tsx) */
+  --font-heading: var(--font-source-serif), "Georgia", "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, "Segoe UI", Arial, sans-serif;
+}
+
+/* Bazowe style strony */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Widoczny fokus – złoty ring (dostępność) */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-gold-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Wejście kart po zmianie kontynentu (używane z motion-safe:animate-[...]) */
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

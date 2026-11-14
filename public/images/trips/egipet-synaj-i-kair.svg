@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="Egipet Synaj I">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12233F"/>
+      <stop offset="100%" stop-color="#0B1730"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8913A" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#C8913A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="300" r="336" fill="url(#glow)"/>
+  <g stroke="#C8913A" stroke-width="6.4799999999999995" stroke-linecap="round" opacity="0.9">
+    <line x1="400" y1="228" x2="400" y2="288"/>
+    <line x1="364" y1="243.83999999999997" x2="436" y2="243.83999999999997"/>
+  </g>
+  <text x="400" y="354" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="#FAF7F2" opacity="0.92">Egipet Synaj</text>
+  <text x="400" y="414" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="48" fill="#FAF7F2" opacity="0.92">I</text>
+  <rect x="0" y="591" width="800" height="9" fill="#C8913A"/>
+</svg>
