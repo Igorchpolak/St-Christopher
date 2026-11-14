@@ -12,7 +12,7 @@ export default async function UpcomingTrips() {
     <section
       id="najblizsze-wyjazdy"
       aria-labelledby="najblizsze-wyjazdy-title"
-      className="bg-white py-12 md:py-16"
+      className="scroll-mt-36 bg-white py-12 md:py-16"
     >
       <Container>
         <SectionHeading

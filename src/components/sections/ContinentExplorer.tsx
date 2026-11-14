@@ -1,13 +1,30 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import TripCard from "@/components/cards/TripCard";
-import WorldMap from "@/components/map/WorldMap";
 import Carousel from "@/components/ui/Carousel";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { Continent, ContinentId, Trip } from "@/types";
+
+/**
+ * Mapa ładowana dynamicznie (next/dynamic) – d3-geo, topojson-client i
+ * world-atlas trafiają do osobnego chunku, nie do głównego bundla strony.
+ * Placeholder ma ten sam stosunek szerokości do wysokości co <svg> mapy
+ * (1000×520), więc nie powstaje CLS.
+ */
+const WorldMap = dynamic(() => import("@/components/map/WorldMap"), {
+  ssr: false,
+  loading: () => (
+    <div
+      aria-hidden="true"
+      role="presentation"
+      className="aspect-[1000/520] w-full animate-pulse bg-cream"
+    />
+  ),
+});
 
 interface ContinentExplorerProps {
   continents: Continent[];
@@ -72,7 +89,11 @@ export default function ContinentExplorer({ continents, trips }: ContinentExplor
   };
 
   return (
-    <section aria-labelledby="kontynenty-title" className="bg-cream py-12 md:py-16">
+    <section
+      id="kontynenty"
+      aria-labelledby="kontynenty-title"
+      className="scroll-mt-36 bg-cream py-12 md:py-16"
+    >
       <Container>
         <SectionHeading id="kontynenty-title" title="Wybierz kontynent" />
 

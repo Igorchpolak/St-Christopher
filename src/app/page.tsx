@@ -1,57 +1,37 @@
+import ContactSection from "@/components/sections/ContactSection";
+import ContinentExplorer from "@/components/sections/ContinentExplorer";
+import BlogSection from "@/components/sections/BlogSection";
 import Hero from "@/components/sections/Hero";
 import UpcomingTrips from "@/components/sections/UpcomingTrips";
-import Button from "@/components/ui/Button";
-import Container from "@/components/ui/Container";
-import Logo from "@/components/ui/Logo";
-import SectionHeading from "@/components/ui/SectionHeading";
+import { getAllTrips, getContinents, getSiteConfig } from "@/lib/api";
+import { buildTravelAgencyJsonLd } from "@/lib/seo";
 
-export default function HomePage() {
+/**
+ * Strona główna (Server Component) – krok 9: złożenie sekcji.
+ * Dane pobierane równolegle przez warstwę api.ts; sekcje Hero, UpcomingTrips,
+ * BlogSection i ContactSection pobierają własne dane wewnętrznie, a
+ * ContinentExplorer dostaje kontynenty i wyjazdy przez propsy.
+ */
+export default async function HomePage() {
+  const [site, continents, trips] = await Promise.all([
+    getSiteConfig(),
+    getContinents(),
+    getAllTrips(),
+  ]);
+
   return (
     <>
+      {/* Dane strukturalne (SEO) – zbudowane z konfiguracji strony, bez duplikatów. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(buildTravelAgencyJsonLd(site)) }}
+      />
+
       <Hero />
-
-      <div className="bg-white py-6">
-        <Container>
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <Logo />
-            <div className="rounded bg-navy-900 p-3">
-              <Logo variant="light" />
-            </div>
-          </div>
-        </Container>
-      </div>
-
       <UpcomingTrips />
-
-      <section className="py-16">
-        <Container className="space-y-10">
-          <SectionHeading title="Wybierz kontynent" />
-          <SectionHeading as="h3" title="Wybierz w Europie" />
-
-          <div className="flex flex-wrap items-center gap-4">
-            <Button href="#">Zobacz nasze pielgrzymki</Button>
-            <div className="bg-navy-900">
-              <Button href="#" variant="outline-light">
-                O nas
-              </Button>
-            </div>
-            <Button variant="ghost">Ghost</Button>
-            <Button size="sm">Mały przycisk</Button>
-            <Button disabled>Wyłączony</Button>
-            <a href="#kontakt" className="text-sm text-muted underline">
-              Link testowy focus-visible
-            </a>
-          </div>
-
-          <div className="rounded-lg bg-white p-6 shadow-md">
-            <h3 className="font-heading text-xl text-navy-800">Karta testowa</h3>
-            <p className="mt-2 text-sm text-muted">
-              Prymitywy UI gotowe – kolejne kroki: dane, sekcje, mapa, karuzele.
-            </p>
-            <p className="mt-4 text-sm font-semibold text-gold-500">od 2990 PLN</p>
-          </div>
-        </Container>
-      </section>
+      <ContinentExplorer continents={continents} trips={trips} />
+      <BlogSection />
+      <ContactSection />
     </>
   );
 }

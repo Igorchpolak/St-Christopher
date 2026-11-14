@@ -2,6 +2,7 @@ import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { getSiteConfig } from "@/lib/api";
 import HeroBackground from "./HeroBackground";
+import HeroFilm from "./HeroFilm";
 
 /**
  * Hero (Server Component) – dane z getSiteConfig().hero.
@@ -37,6 +38,9 @@ export default async function Hero() {
           </div>
         </div>
       </Container>
+
+      {/* Okrągły przycisk "Zobacz film" + modal – tylko gdy filmUrl jest ustawiony. */}
+      {hero.filmUrl ? <HeroFilm filmUrl={hero.filmUrl} /> : null}
 
       {/* Fala na dolnej krawędzi (kolor tła strony) – dekoracja, ignorowana
           przez czytniki ekranu i nawigację klawiaturą. */}
