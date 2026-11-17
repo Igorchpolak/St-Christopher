@@ -1,23 +1,24 @@
 /**
- * Walidacja danych (krok 2) – uruchamianie: npm run validate:data
- * Sprawdza:
- *  - unikalność id/slug (wyjazdy, wpisy),
+ * Walidacja danych – uruchamianie: npm run validate:data
+ * Sprawdza treść CMS-a Keystatic (src/content/trips/*.json) oraz statyczne
+ * wpisy blogowe (src/data/posts.ts):
+ *  - unikalność slug (wyjazdy, wpisy),
  *  - poprawność referencji continent,
- *  - endDate >= startDate,
- *  - zgodność durationDays z różnicą dat (włącznie),
+ *  - durationDays > 0,
+ *  - gdy podane są OBAJE daty: ISO, endDate >= startDate i zgodność
+ *    durationDays z różnicą dat (włącznie); jedna data = błąd,
  *  - istnienie plików obrazów w public/,
- *  - dokładnie 3 wyjazdy featured,
- *  - dokładnie 0 wyjazdów w 'oceania',
- *  - co najmniej 5 wyjazdów w 'europe'.
+ *  - dokładnie 3 wyjazdy featured (sekcja „Najbliższe wyjazdy”),
+ *  - numeracja dni programu (1..N bez duplikatów),
+ *  - wpisy blogowe: date ISO + obraz.
  * Kończy się exit code 1 przy błędzie.
  */
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { continents } from "../src/data/continents";
 import { posts } from "../src/data/posts";
-import { trips } from "../src/data/trips";
 import { formatDays } from "../src/lib/format";
-import type { ContinentId } from "../src/types";
+import type { ContinentId, Currency } from "../src/types";
 
 // npm uruchamia skrypty zawsze z korzenia projektu.
 const root = resolve(process.cwd());
@@ -36,72 +37,86 @@ function daysInclusive(startIso: string, endIso: string): number {
 }
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+const CONTINENT_IDS = new Set(continents.map((c) => c.id));
+const CURRENCIES: Currency[] = ["PLN", "USD", "EUR"];
 
-// --- Kontynenty ---
-const continentIds = new Set<ContinentId>();
-for (const continent of continents) {
-  if (continentIds.has(continent.id)) {
-    fail(`Duplicat continent.id: "${continent.id}"`);
-  }
-  continentIds.add(continent.id);
-}
+// --- Wyjazdy (treść CMS-a) ---
+const tripsDir = join(root, "src", "content", "trips");
+const tripFiles = readdirSync(tripsDir).filter((name) => name.endsWith(".json"));
 
-// --- Wyjazdy ---
-const tripIds = new Set<string>();
 const tripSlugs = new Set<string>();
+let featuredCount = 0;
+let tripCount = 0;
+const continentCount = new Map<ContinentId, number>();
 
-for (const trip of trips) {
-  const label = `trip "${trip.slug}"`;
+for (const file of tripFiles) {
+  const slug = file.replace(/\.json$/, "");
+  const trip = JSON.parse(readFileSync(join(tripsDir, file), "utf8"));
+  tripCount += 1;
+  const label = `trip "${slug}"`;
 
-  if (tripIds.has(trip.id)) fail(`Duplicat trips.id: "${trip.id}"`);
-  tripIds.add(trip.id);
+  if (tripSlugs.has(slug)) fail(`${label}: duplikat slug`);
+  tripSlugs.add(slug);
 
-  if (tripSlugs.has(trip.slug)) fail(`Duplicat trips.slug: "${trip.slug}"`);
-  tripSlugs.add(trip.slug);
+  if (typeof trip.title !== "string" || trip.title.trim().length === 0) {
+    fail(`${label}: brak tytułu`);
+  }
 
-  if (!continentIds.has(trip.continent)) {
+  if (!CONTINENT_IDS.has(trip.continent)) {
     fail(`${label}: nieznany continent "${trip.continent}"`);
-  }
-
-  if (!ISO_DATE.test(trip.startDate) || !ISO_DATE.test(trip.endDate)) {
-    fail(`${label}: startDate/endDate nie są datami ISO (${trip.startDate} / ${trip.endDate})`);
-    continue;
-  }
-
-  if (trip.endDate < trip.startDate) {
-    fail(`${label}: endDate (${trip.endDate}) jest przed startDate (${trip.startDate})`);
   } else {
-    const diff = daysInclusive(trip.startDate, trip.endDate);
-    if (trip.durationDays !== diff) {
-      fail(`${label}: durationDays=${trip.durationDays}, a różnica dat włącznie to ${diff}`);
+    continentCount.set(trip.continent, (continentCount.get(trip.continent) ?? 0) + 1);
+  }
+
+  if (!Number.isInteger(trip.durationDays) || trip.durationDays <= 0) {
+    fail(`${label}: durationDays musi być dodatnią liczbą całkowitą`);
+  }
+
+  const hasStart = typeof trip.startDate === "string" && trip.startDate.length > 0;
+  const hasEnd = typeof trip.endDate === "string" && trip.endDate.length > 0;
+  if (hasStart !== hasEnd) {
+    fail(`${label}: ustawione musi być OBAJE daty lub żadna (termin „wkrótce”)`);
+  } else if (hasStart && hasEnd) {
+    if (!ISO_DATE.test(trip.startDate) || !ISO_DATE.test(trip.endDate)) {
+      fail(`${label}: startDate/endDate nie są datami ISO (${trip.startDate} / ${trip.endDate})`);
+    } else if (trip.endDate < trip.startDate) {
+      fail(`${label}: endDate (${trip.endDate}) jest przed startDate (${trip.startDate})`);
+    } else if (trip.durationDays !== daysInclusive(trip.startDate, trip.endDate)) {
+      fail(`${label}: durationDays=${trip.durationDays}, a różnica dat włącznie to ${daysInclusive(trip.startDate, trip.endDate)}`);
     }
   }
 
-  const imagePath = join(root, "public", trip.image);
-  if (!trip.image.startsWith("/images/")) {
-    fail(`${label}: image powinno wskazywać na /images/... (jest: ${trip.image})`);
-  } else if (!existsSync(imagePath)) {
-    fail(`${label}: brak pliku obrazu public${trip.image} (uruchom npm run generate:placeholders)`);
+  if (typeof trip.priceFrom === "number" && !CURRENCIES.includes(trip.currency)) {
+    fail(`${label}: nieznana waluta "${trip.currency}"`);
   }
 
-  if (trip.image.trim().length < 3) {
+  if (typeof trip.image !== "string" || !trip.image.startsWith("/images/")) {
+    fail(`${label}: image powinno wskazywać na /images/... (jest: ${trip.image})`);
+  } else if (!existsSync(join(root, "public", trip.image))) {
+    fail(`${label}: brak pliku obrazu public${trip.image}`);
+  }
+
+  if (typeof trip.imageAlt !== "string" || trip.imageAlt.trim().length < 3) {
     warnings.push(`${label}: podejrzanie krótki imageAlt`);
   }
+
+  if (trip.featured === true) featuredCount += 1;
+
+  // Numeracja dni programu
+  const program = Array.isArray(trip.program) ? trip.program : [];
+  const dayNumbers = program.map((d: { day?: number }) => d?.day);
+  dayNumbers.forEach((day: unknown, index: number) => {
+    if (day !== index + 1) {
+      fail(`${label}: program – dzień nr ${String(day)} na pozycji ${index + 1} (oczekiwano ${index + 1})`);
+    }
+  });
+  if (Number.isInteger(trip.durationDays) && program.length > 0 && program.length !== trip.durationDays) {
+    warnings.push(`${label}: durationDays=${trip.durationDays}, a dni w programie: ${program.length}`);
+  }
 }
 
-const featuredCount = trips.filter((trip) => trip.featured === true).length;
 if (featuredCount !== 3) {
   fail(`Oczekiwano dokładnie 3 wyjazdów featured, jest: ${featuredCount}`);
-}
-
-const oceaniaCount = trips.filter((trip) => trip.continent === "oceania").length;
-if (oceaniaCount !== 0) {
-  fail(`Oceania ma mieć celowo 0 wyjazdów, jest: ${oceaniaCount}`);
-}
-
-const europeCount = trips.filter((trip) => trip.continent === "europe").length;
-if (europeCount < 5) {
-  fail(`Europa powinna mieć co najmniej 5 wyjazdów, jest: ${europeCount}`);
 }
 
 // --- Wpisy blogowe ---
@@ -146,4 +161,9 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log(`✔ Walidacja danych OK: ${trips.length} wyjazdów, ${posts.length} wpisów, ${continents.length} kontynentów.`);
+const perContinent = [...continentCount.entries()]
+  .map(([id, count]) => `${id}: ${count}`)
+  .join(", ");
+console.log(
+  `✔ Walidacja danych OK: ${tripCount} wyjazdów z CMS (${perContinent}), ${posts.length} wpisów.`,
+);

@@ -18,9 +18,12 @@ function parseIsoDate(iso: string): { year: number; month: number; day: number }
   };
 }
 
-/** formatPrice(2990) -> "2990 PLN" (bez separatorów tysięcy, jak w projekcie). */
-export function formatPrice(price: number): string {
-  return `${price} PLN`;
+/**
+ * formatPrice(2990) -> "2990 PLN" (bez separatorów tysięcy, jak w projekcie).
+ * formatPrice(1499, "USD") -> "1499 USD".
+ */
+export function formatPrice(price: number, currency: "PLN" | "USD" | "EUR" = "PLN"): string {
+  return `${price} ${currency}`;
 }
 
 /** formatDate("2025-05-10") -> "10.05.2025". */
@@ -56,4 +59,19 @@ export function formatDays(days: number): string {
     throw new Error(`formatDays oczekuje dodatniej liczby całkowitej, otrzymano: ${days}`);
   }
   return days === 1 ? "1 dzień" : `${days} dni`;
+}
+
+/**
+ * Zakres dat wyjazdu z fallbackiem dla wyjazdów bez ustalonego terminu:
+ * hasTripDates("2027-04-09", "2027-04-16") -> "9–16.04.2027",
+ * hasTripDates(null, null) -> "Termin wkrótce".
+ */
+export function formatTripTerm(
+  startDate: string | undefined,
+  endDate: string | undefined,
+): string {
+  if (startDate && endDate) {
+    return formatDateRange(startDate, endDate);
+  }
+  return "Termin wkrótce";
 }

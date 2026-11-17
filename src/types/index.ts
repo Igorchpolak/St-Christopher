@@ -15,6 +15,18 @@ export interface Continent {
   coordinates: [number, number];
 }
 
+export type Currency = "PLN" | "USD" | "EUR";
+
+/** Jeden dzień programu wyjazdu (z CMS). */
+export interface TripProgramDay {
+  /** Numer dnia w programie (1-based). */
+  day: number;
+  /** Nagłówek dnia, np. "EU-USA, Chicago" (może być pusty). */
+  title: string;
+  /** Opis dnia. */
+  description: string;
+}
+
 export interface Trip {
   id: string;
   slug: string;
@@ -22,17 +34,28 @@ export interface Trip {
   continent: ContinentId;
   country: string;
   durationDays: number;
-  /** ISO, np. "2027-04-09". */
-  startDate: string;
+  /** ISO, np. "2027-04-09". Opcjonalne – wyjazd bez ustalonego terminu ("wkrótce"). */
+  startDate?: string;
   /** ISO, np. "2027-04-16". */
-  endDate: string;
-  /** Liczba osób w grupie ("os." na karcie). */
-  groupSize: number;
-  priceFrom: number;
-  currency: "PLN";
+  endDate?: string;
+  /** Liczba osób w grupie ("os." na karcie). Opcjonalne. */
+  groupSize?: number;
+  /** Cena od (kwota). Opcjonalne – brak = "cena na zapytanie". */
+  priceFrom?: number;
+  currency: Currency;
+  /** Uwagi do ceny, np. "+ przeloty", "cena przy min. 35 uczestnikach". */
+  priceNote?: string;
   image: string;
   imageAlt: string;
   featured?: boolean;
+  /** Krótki opis (SEO / karta wyjazdu). */
+  summary?: string;
+  /** Program pielgrzymki dzień po dniu (domyślnie pusty). */
+  program: TripProgramDay[];
+  /** Pozycje "cena zawiera" (domyślnie puste). */
+  priceIncludes: string[];
+  /** Pozycje "cena nie zawiera" (domyślnie puste). */
+  priceExcludes: string[];
 }
 
 export interface BlogPost {

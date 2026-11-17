@@ -1,0 +1,19 @@
+{
+  "title": "Włochy – Rzym i Watykan",
+  "continent": "europe",
+  "country": "Włochy",
+  "durationDays": 8,
+  "startDate": "2027-04-09",
+  "endDate": "2027-04-16",
+  "groupSize": 35,
+  "priceFrom": 2990,
+  "currency": "PLN",
+  "priceNote": null,
+  "summary": null,
+  "image": "/images/trips/wlochy-rzym-i-watykan.svg",
+  "imageAlt": "Bazylika św. Piotra w Rzymie o zachodzie słońca",
+  "featured": true,
+  "program": [],
+  "priceIncludes": [],
+  "priceExcludes": []
+}

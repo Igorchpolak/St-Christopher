@@ -1,0 +1,110 @@
+{
+  "title": "Pielgrzymka po krajach Ameryki Centralnej",
+  "continent": "north-america",
+  "country": "Ameryka Centralna",
+  "durationDays": 16,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": null,
+  "currency": "PLN",
+  "priceNote": "Cena na zapytanie",
+  "summary": null,
+  "image": "/images/trips/pielgrzymka-po-krajach-ameryki-centralnej.jpg",
+  "imageAlt": "Pielgrzymka po krajach Ameryki Centralnej",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "",
+      "description": "Przylot do miasta Panama. Kolacja i nocleg."
+    },
+    {
+      "day": 2,
+      "title": "",
+      "description": "Śniadanie. Zwiedzanie miasta Panama: Stare Miasto, Katedra. Przejazd nad Kanał Panamski. Zapoznanie się z historią i funkcjonowaniem tego arcydzieła -sztuki inżynieryjnej”. Powrót do miasta Panama – wczesna obiadokolacja. Transfer na lotnisko i odlot do San Jose. Przylot do stolicy Kostaryki. Transfer do hotelu. Nocleg. Msza Święta."
+    },
+    {
+      "day": 3,
+      "title": "",
+      "description": "Śniadanie. Przejazd do sanktuarium Matki Bożej od Aniołów w Cartago – patronki Kostaryki. Czas na spacery i modlitwę. Dalszy przejazd do majestatycznego wulkanu Poas. Spacery wokół krateru. Odwiedzenie Parku La Paz, w którym można podziwiać wspaniałą tropikalną roślinność, wodospady, olbrzymie motyle oraz najmniejsze ptaki świata – kolibry. Wczesna obiadokolacja. Przejazd na nocleg w okolice aktywnego wulkanu Arenal. Msza Święta. Nocne podziwianie ognistych fontann lawy."
+    },
+    {
+      "day": 4,
+      "title": "",
+      "description": "Śniadanie. Przejście po wiszących nad zielonym sklepieniem mostach: podziwianie tropikalnej roślinności podczas spaceru nad koronami palm i innych typowych dla równikowej strefy drzew. Przejazd na granicę z Nikaraguą. Po niecodziennej odprawie granicznej, gdzie maszyna losuje, komu będzie sprawdzany bagaż przejazd do pobliskiej perły kolonialnej architektury miasta Granada (na liście UNESCO) . Po południu spacer po kolonialnym centrum miasta: kościół La Merced, klasztor Św. Franciszka, (w którym obecnie znajduje się Muzeum Kolonialne), dom rodziny Zamora. Kolacja i nocleg. Msza Święta."
+    },
+    {
+      "day": 5,
+      "title": "",
+      "description": "Śniadanie. Przejazd do Parku Narodowego wulkanu Masaya – podziwianie kosmicznego krajobrazu tego miejsca oraz samego aktywnego krateru wulkanicznego. Przejazd na targ wyrobów artystycznych. Na koniec dnia krótkie zwiedzanie stolicy kraju – miasta Managua: Katedra, Wzgórze Dyktatorów. Transfer na lotnisko i przelot do miasta Gwatemala. Kolacja i nocleg. Msza Święta."
+    },
+    {
+      "day": 6,
+      "title": "",
+      "description": "Śniadanie. Panoramiczne zwiedzanie centrum miasta Gwatemala. Przejazd do Panajchachel. Po drodze wizyta na targu owoców w Solola. Podziwianie widoku na jezioro Atitlan otoczonego trzema wulkanami. Przeprawa łodzią po jeziorze do miejscowości Santiago Atitlan: zwiedzanie miejscowego kolonialnego kościółka oraz wizyta w domu miejscowego synkretycznego bóstwa Maximona. Koalcja i nocleg w Panajachel. Msza Święta."
+    },
+    {
+      "day": 7,
+      "title": "",
+      "description": "Śniadanie. Przejazd na słynny targ indiański w Chichicastenango (czwartek, niedziela): spotkanie z rdzenną ludnością, jej sztuką i obyczajami. Czas wolny na zakupy barwnych wyrobów Majów. Wczesnym popołudniem przejazd do Antigua Gwatemala. Spacer po dawnej kolonialnej stolicy Gwatemali m.in. Katedra, kościół Św. Franciszka, gdzie znajdują się relikwie brata św. Piotra Betancourt. Msza Święta. Kolacja i nocleg w Antigua Gwatemala."
+    },
+    {
+      "day": 8,
+      "title": "",
+      "description": "Śniadanie. Wczesnym rankiem wyjazd na granicę z Hondurasem. Po przekroczeniu granicy zwiedzanie jednego z bardziej interesujących zespołów architektonicznych Majów ze słynnymi hieroglifami na fasadzie piramidy w Copan. Koalcja i nocleg w Hondurasie w Copan. Msza Święta."
+    },
+    {
+      "day": 9,
+      "title": "",
+      "description": "Śniadanie. Przejazd do Livingstone – osady zamieszkiwanej przez murzyńsko – kreolską ludność. Zetknięcie się z kulturą, muzyką i zwyczajami Garifuna. Po drodze wizyta w ośrodku prekolumbijskim, z którego pochodzą największe odkryte kamienne pomniki (stele) – Quirigua. Nocleg w Livingston, do którego dopłynąć można tylko łodzią wzdłuż wybrzeża karaibskiego lub w Rio Dulce. Kolacja i Msza Święta."
+    },
+    {
+      "day": 10,
+      "title": "",
+      "description": "Śniadanie. Rano krótki spacer po murzyńskiej osadzie, która do dnia dzisiejszego przesiąknięta jest tradycjami Garifuna (kultura wytworzona przez czarnych niewolników przywiezionych z Wysp Karaibskich). Po spacerze spływ rzeką Rio Dulce, we wspaniałej scenerii gwatemalskiej dżungli do miejsca ponownego spotkanie z cywilizacją. Przejazd do leżącego na niewielkiej wyspie Flores. Kolacja i nocleg. Msza Święta"
+    },
+    {
+      "day": 11,
+      "title": "",
+      "description": "Śniadanie. Przejazd do Tikal – zwiedzanie imponujących piramid Majów położonych w samym sercu dżungli m.in. Świątynia Jaguarów, Świątynia Masek, potężne zespoły pałacowe. Przejazd na nocleg do Flores. Kolacja. Msza Święta."
+    },
+    {
+      "day": 12,
+      "title": "",
+      "description": "Śniadanie. Przejazd przez Belize do Meksyku. Po drodze zwiedzanie położonego z dala od szlaków turystycznych, centrum prekolumbijskiego Xunantunich, z którego piramid roztaczają się imponujące widoki na belizyjskie równiny. Przekroczenie granicy z Meksykiem. Kolacja i nocleg w Chetumal. Msza Święta."
+    },
+    {
+      "day": 13,
+      "title": "",
+      "description": "Śniadanie. Przejazd do Cancun lub Playa del Carmen. Po drodze wizyta w Coba i Tulum, gdzie znajdują się jedne z najbardziej atrakcyjnych stref archeologicznych na Jukatanie. Kolacja i nocleg w Cancun lub Playa del Carmen. All inclusive."
+    },
+    {
+      "day": 14,
+      "title": "",
+      "description": "Śniadanie. Plażowanie. Fakultatywnie możliwość wyjazdu do znajdujących się na Liście Dziedzictwa Ludności UNESCO ruin Majów w Chichen Itza (ok.80 USD), lub na Wyspę Kobiet ( ok. 75 USD). All inclusive."
+    },
+    {
+      "day": 15,
+      "title": "",
+      "description": "Śniadanie. Do południa plażowanie. Po południu przejazd na lotnisko i rozpoczęcie powrotu do kraju."
+    },
+    {
+      "day": 16,
+      "title": "",
+      "description": "Przylot do Polski."
+    }
+  ],
+  "priceIncludes": [
+    "śniadania i kolacje, w Cancun/Playa all inclusive",
+    "opieka pilota-przewodnika na całej trasie",
+    "transport klimatyzowanym samochodem lub autokarem",
+    "hotele 3+*, 4*(lokalny standard), w Cancun/Playa bezpośrednio położony przy plaży",
+    "pokoje 2-osobowe z łazienką",
+    "bilety wstępu",
+    "rezerwacja miejsc celem odbycia Mszy Świętych"
+  ],
+  "priceExcludes": [
+    "JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

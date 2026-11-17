@@ -3,16 +3,27 @@
  * Uruchamianie: npx tsx scripts/generate-placeholders.ts
  *
  * Generuje:
- *  - public/images/trips/<slug>.svg        (4:3)  – z src/data/trips.ts
+ *  - public/images/trips/<slug>.svg        (4:3)  – ze slugów wpisów CMS (src/content/trips)
  *  - public/images/blog/<slug>.svg         (16:10) – z src/data/posts.ts
  *  - public/images/hero-poster.svg         (16:9)
  *  - public/images/contact-bg.svg          (4:5, krzyż na ścieżce)
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { posts } from "../src/data/posts";
-import { trips } from "../src/data/trips";
+
+/** Slugi + tytuły wyjazdów z treści CMS-a Keystatic. */
+function tripsFromContent(): Array<{ slug: string; title: string }> {
+  const tripsDir = join(root, "src", "content", "trips");
+  return readdirSync(tripsDir)
+    .filter((name) => name.endsWith(".json"))
+    .map((name) => {
+      const slug = name.replace(/\.json$/, "");
+      const data = JSON.parse(readFileSync(join(tripsDir, name), "utf8"));
+      return { slug, title: String(data.title ?? slug) };
+    });
+}
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
@@ -118,7 +129,7 @@ function writeSvg(relPath: string, svg: string): void {
 }
 
 // Wyjazdy (4:3)
-for (const trip of trips) {
+for (const trip of tripsFromContent()) {
   writeSvg(join("trips", `${trip.slug}.svg`), placeholderSvg(labelFor(trip.slug), 800, 600));
 }
 

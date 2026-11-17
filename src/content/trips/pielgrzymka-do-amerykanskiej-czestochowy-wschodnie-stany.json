@@ -1,0 +1,92 @@
+{
+  "title": "Pielgrzymka do amerykańskiej Częstochowy – Wschodnie Stany",
+  "continent": "north-america",
+  "country": "USA (Wschodnie Stany)",
+  "durationDays": 12,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": 1599,
+  "currency": "USD",
+  "priceNote": "1599 $ +3995 zł Cena przy min 35 uczestnik / 1699 $+3995zł - poniżej 35 uczestników",
+  "summary": null,
+  "image": "/images/trips/pielgrzymka-do-amerykanskiej-czestochowy-wschodnie-stany.jpg",
+  "imageAlt": "Pielgrzymka do amerykańskiej Częstochowy – Wschodnie Stany",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "",
+      "description": "Zebranie na lotnisku i przelot przez Atlantyk. Przylot do USA w godzinach wieczornych. Transfer do hotelu w okolicach Nowego Jorku i nocleg."
+    },
+    {
+      "day": 2,
+      "title": "",
+      "description": "Zwiedzanie Nowego Jorku. W czasie wycieczki zobaczymy m.in.: Statuę Wolności, Kościół Świętej Trójcy, Budynek ONZ, Katedrę Św. Patryka, Times Square, -Ground Zero”, Centrum Finansowe na Wall Street, Empire State Building, Centrum Rockefeller’a, 42-ga ulica, Broadway.\nNocleg w okolicach Nowego Jorku."
+    },
+    {
+      "day": 3,
+      "title": "",
+      "description": "Przejazd do Bostonu.\nPo drodze zatrzymamy sie w New Haven /CT/, zwiedzimy pięknie zachowany stary port."
+    },
+    {
+      "day": 4,
+      "title": "",
+      "description": "Zwiedzanie Bostonu. Wyjazd w godzinach porannych.\nZwiedzanie: Harvard, Cambridge, Quincy Market, Faneuil Hall Prudential Tower I wiele innych atrakcji. Nocleg w okolicach Bostonu."
+    },
+    {
+      "day": 5,
+      "title": "",
+      "description": "Rano przejazd nad Wodospad Niagara. Zakwaterowanie i czas wolny (iluminacje świetlne, kasyno itd.)."
+    },
+    {
+      "day": 6,
+      "title": "",
+      "description": "Pobyt nad Wodospadem Niagara: rejs statkiem „Maid of the Mist” pod wodospad, Park Niagara oraz przejście do „Jaskini Wiatrow”/zależne od pogody/. Następnie przejazd do Starego Fortu nad Jeziorem Ontario. Nocleg w pobliżu Wodospadu Niagara."
+    },
+    {
+      "day": 7,
+      "title": "",
+      "description": "Przejazd do Sanktuarium Matki Boskiej Fatimskiej na Mszę Świętą. Następnie udamy sie do jednej z winnic nad „Jeziorem Paluszkowym” (-Finger Lake”), w której będziemy mogli dokonać bezpłatnej degustacji lokalnych win. Wyjazd w kierunku Filadelfii."
+    },
+    {
+      "day": 8,
+      "title": "",
+      "description": "Polska Częstochowa: Msza Święta oraz zwiedzanie.\nNastępnie przejazd do Filadelfii: zobaczymy m.in.: Dzwon Wolności, Gmach Niepodległości, Muzeum Flagi Amerykańskiej, najstarszą uliczkę w Stanach Zjednoczonych i wiele, wiele innych atrakcji nie tylko historycznych. Udamy się również do Longwood Gardens, czyli tzw. ogrodow Du Pont’a."
+    },
+    {
+      "day": 9,
+      "title": "",
+      "description": "Całodzienne zwiedzanie Waszyngtonu. Cmentarz w\nArlington: zmiana warty przed Grobem Nieznanego żołnierza, Pałacyk Arlington, grób rodziny Kennedy (prezydenta Kennedy’ego). Monument Lincolna i Waszyngtona. Biały Dom, Capitol, Bazylika. Pomniki Bohaterów Wojny Wietnamskiej, Koreańskiej i niedawno otwarty pomnik Bohaterów II Wojny Światowej. Muzeum Kosmosu i Lotnictwa (lub inne do wyboru), Centrum Jana Pawła II, Msza Święta w Bazylice Niepokalanego Poczęcia, zwiedzanie Katedry Narododowej."
+    },
+    {
+      "day": 10,
+      "title": "",
+      "description": "Dzień wolny przeznaczony na plażowanie na jednej ze\nwspaniałych atlantyckich plaż. Atrakcje wodne-fakultet"
+    },
+    {
+      "day": 11,
+      "title": "",
+      "description": "Zakupy w jednym z -outlet mall”, czyli wielkim centrum handlowym. Transfer na lotnisko i wylot do Polski."
+    },
+    {
+      "day": 12,
+      "title": "",
+      "description": "Przylot do Polski w godzinach rannych."
+    }
+  ],
+  "priceIncludes": [
+    "przelot samolotem Polska-USA-Polska",
+    "zakwaterowanie w hotelach, pok 2 osob z łazienk.",
+    "autakar/Bus na całej trasie",
+    "Pilot ma całej trasie",
+    "ubezpieczenie KL+NW"
+  ],
+  "priceExcludes": [
+    "zwyczajowe napiwki; ok 3$/dzien/osob.",
+    "bilety wstępu, tax-y, : obligatoryjnie. 175$;",
+    "Boston $45 (opcjonalnie-statek, który zawiezie nas na bezkrwawy połów wielorybów)",
+    "koszty wyżywienia, ok.15$- 25$/dzień",
+    "dopłata do jedynki 395$/osob. JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

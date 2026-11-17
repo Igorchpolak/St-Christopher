@@ -1,0 +1,88 @@
+{
+  "title": "Izrael, Jordania, Egipt",
+  "continent": "asia",
+  "country": "Izrael, Jordania, Egipt",
+  "durationDays": 11,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": 990,
+  "currency": "USD",
+  "priceNote": "990 USD + 1990 PLN",
+  "summary": null,
+  "image": "/images/trips/izrael-jordania-egipt.jpg",
+  "imageAlt": "Izrael, Jordania, Egipt",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "Zbiórka na lotnisku w Krakowie, przelot do Israela Eilat Ovda .",
+      "description": "Przejazd do Jordanii. Wyprawa na pustynie Wadi Rum , przejazd przez pustynie do Wadi Mussa,\nzakwaterowanie w hotelu, obiadokolacja i nocleg."
+    },
+    {
+      "day": 2,
+      "title": "2. dzień:",
+      "description": "śniadanie, zwiedzanie Petry – starożytnego miasta wykutego w różowym piaskowcu (amfiteatr, grobowce, świątynie).\nWyjazd na górę Nebo, gdzie wg tradycji zmarł Mojżesz. Zwiedzanie Madaby. Zakwaterowanie, obiadokolacja i nocleg w Ammanie."
+    },
+    {
+      "day": 3,
+      "title": "3. dzień:",
+      "description": "śniadanie, zwiedzanie Macherontu – forteca Heroda Wielkiego, przejazd nad rzekę Jordan gdzie znajduje się miejsce chrztu Jezusa (Betania), a następnie Karak – zamek krzyżowców z XII wieku i/lub przejazd nad gorące źródła Main Spa (z możliwością kąpieli).Powrót i zwiedzanie Ammanu. Kolacja i nocleg w Ammanie."
+    },
+    {
+      "day": 4,
+      "title": "4. dzień:",
+      "description": "śniadanie, zwiedzanie Jarashu (dawna Geraza) – miasto z okresu rzymskiego, fakultatywny przejazd do Gadary, a następnie wjazd do Izraela przez most Szejka Husaina. Zakwaterowanie, obiadokolacja i nocleg w Nazarecie/ Tyberiadzie."
+    },
+    {
+      "day": 5,
+      "title": "5. dzień:",
+      "description": "śniadanie, rejs łodzią po jeziorze Galilejskim (fakultatywnie) . Przejazd i nawiedzenie miejsca pierwszego cudu w Kanie Galilejskiej. Przejazd i zwiedzanie Nazaretu: Bazylika Zwiastowania, kościół św. Józefa. Przejazd w kierunku Hajfy – Góra Karmel. Przejazd przez Cezareę Nadmorka do Betlehem. Obiadokolacja i nocleg w Betlehem."
+    },
+    {
+      "day": 6,
+      "title": "6. dzień:",
+      "description": "śniadanie, zwiedzanie Betlehem: Bazylika Narodzenia Pana Naszego Jezusa, Grota Mleczna, Pole Pasterzy. Przejazd do Jerozolimy: zwiedzanie Starego Miasta. Kościół Litostrotos – miejsce sądu Pana Jezusa. Via Dolorosa – Droga Krzyżowa, Bazylika Grobu Świętego na Kalwarii – Golgocie. Kościół św. Anny i Ecce homo. Obiadokolacja i nocleg w Betlejem."
+    },
+    {
+      "day": 7,
+      "title": "7. dzień:",
+      "description": "śniadanie, wyjazd autokarem do Jerozolimy: Betfage, Góra Oliwna – zwiedzanie kościoła Pater Noster, nawiedzenie kościoła Dominus Flevit; miejsca gdzie Pan Jezus zapłakał nad Jerozolimą. Zwiedzanie Ogrodu Getsemani – bazyliki Agonii Pana Jezusa, kościoła Grobu NMP. Przejście pod Ścianę Płaczu, Góra Syjon: zwiedzanie Wieczernika i bazyliki Zaśnięcia NMP. Kościół św. Piotra – In Gallicantu. Obiadokolacja i nocleg w Betlehem."
+    },
+    {
+      "day": 8,
+      "title": "8. dzień:",
+      "description": "śniadanie, przejazd przez Pustynię Judzką w kierunku Ejlatu. z krótkim postojem w Jerycho. Przejazd nad Morze Martwe z możliwością kąpieli. Przejazd k/Qumran – miejsca gdzie odnaleziono rękopisy, zawierające teksty biblijne i/lub Masady – twierdzy, będącej symbolem heroicznej walki. Przejazd do Egiptu – zakwaterowani i nocleg w Tabie."
+    },
+    {
+      "day": 9,
+      "title": "9. dzień:",
+      "description": "śniadanie, czas wolny; odpoczynek i plażowanie. Około południowych przejazd i wizyta w Klasztorze Św. Katarzyny oraz nocne wejście na Górę Synaj."
+    },
+    {
+      "day": 10,
+      "title": "10. dzień:",
+      "description": "Powrót do hotelu odpoczynek i czas na kąpiel w morzu. Obiadokolacja i nocleg."
+    },
+    {
+      "day": 11,
+      "title": "11. dzień:",
+      "description": "śniadanie, przejazd na lotnisko i powrót do kraju. Zakończenie pielgrzymki."
+    }
+  ],
+  "priceIncludes": [
+    "Przelot samolotem w obie strony",
+    "Transfer klimatyzowanym autokarem z parafii na lotnisko i z lotniska,",
+    "10 noclegów w pokojach dwuosobowych w hotelach***,",
+    "śniadania (10) i obiadokolacje (10) w miejscach noclegów,",
+    "Transfery w Ziemi Świętej klimatyzowanym autokarem,",
+    "Opieka pilota,",
+    "Ubezpieczenie KL (koszty leczenia) +NNW i Assistance (KLiA) do 30.000 EUR"
+  ],
+  "priceExcludes": [
+    "Napojów do kolacji,",
+    "Biletów wstępu i zwyczajowych napiwków około 195 USD",
+    "Kosztów fakultatywnych, visa wjazdowych",
+    "Dopłaty do pokoju jednoosobowego JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

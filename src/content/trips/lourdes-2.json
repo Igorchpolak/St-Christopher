@@ -1,0 +1,70 @@
+{
+  "title": "Lourdes",
+  "continent": "europe",
+  "country": "Francja (Lourdes)",
+  "durationDays": 8,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": null,
+  "currency": "PLN",
+  "priceNote": "",
+  "summary": null,
+  "image": "/images/trips/lourdes-2.jpg",
+  "imageAlt": "Lourdes",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "ALTÖTTING",
+      "description": "• wyjazd z B-B, godz. 6:00\n• Wyjazd w kierunku granicy. Przekroczenie granicy w Cieszynie przejazd przez Czechy, Austrię do Altötting\n• Msza św. w Altötting – Sanktuarium Naszej Pani w Bawarii\n• Zwiedzanie Sanktuarium oraz Klasztoru Kapucynów, gdzie żył i działał św. Konrad\n• Obiadokolacja i nocleg w Altötting\n[obraz: katedra3.jpg]"
+    },
+    {
+      "day": 2,
+      "title": "ALTÖTTING - ARS",
+      "description": "• Wczesny wyjazd do Ars (śniadanie – suchy prowiant)\n• Przejazd do Ars – Msza św.\n• Zwiedzanie; kościoła, plebanii i domu w której mieszkał św. Jan Vianey – patron proboszczów\n• Obiadokolacja i nocleg"
+    },
+    {
+      "day": 3,
+      "title": "ARS - LOURDES",
+      "description": "• Śniadanie\n• Msza św.\n• Wyjazd do Lourdes; Nabożeństwie Rózańcowym, wieczorna Procesja Maryjna ze świecami\n• Obiadokolacja i nocleg w Lourdes\n[obraz: katedra2.jpg]"
+    },
+    {
+      "day": 4,
+      "title": "LOURDES",
+      "description": "• Śniadanie\n• Nawiedzenie i zwiedzanie sanktuarium: Bazylika Różańca, Bazylika Niepokalanego Poczęcia, Podziemna Bazylika Piusa X, Bazylika św. Bernadety, krypta Nawiedzenie Groty Massabielle… i inne\n• Zapoznanie się z historią objawień Pięknej Pani\n• Msza św.\n• Droga krzyżowa\n• Obiadokolacja, udział w wieczornej procesji ze świecami, nocleg"
+    },
+    {
+      "day": 5,
+      "title": "LOURDES",
+      "description": "• Śniadanie\n• LOURDES: Msza św.\n• Czas wolny na prywatną modlitwę (możliwość skorzystania z kąpieli w basenach z cudowną wodą ze źródła)\n• Udział w Procesji Eucharystycznej\n• Wieczorne nabożeństwo Różańcowe, procesja Maryjna ze świecami\n• Obiadokolacja i nocleg w Lourdes\n[obraz: katedra2.jpg]"
+    },
+    {
+      "day": 6,
+      "title": "LOURDES - LA SALETTE",
+      "description": "• śniadanie, przejazd do położonego na wysokości 1800 m n.p.m. Sanktuarium w La Salette – zapoznanie się z historią objawień\n• Obiadokolacja\n• Udział w Procesji Maryjnej w La Salette\n• Msza św.\n• Nocleg w Domu Pielgrzyma w La Salette\n[obraz: katedra3.jpg]"
+    },
+    {
+      "day": 7,
+      "title": "LA SALETTE - PADWA",
+      "description": "• Śniadanie (suchy prowiant)\n• Wczesny wyjazd do Padwy\n• Msza św. w Bazylice Św. Antoniego\n• Zwiedzanie Bazyliki i modlitwa przy grobie św. Antoniego\n• Przejazd na obiadokolację i nocleg"
+    },
+    {
+      "day": 8,
+      "title": "PADWA - POLSKA",
+      "description": "• Śniadanie\n• Przyjazd do kraju w godz wieczornych\n[obraz: KATEDRA.jpg]"
+    }
+  ],
+  "priceIncludes": [
+    "Transport autobusem LUX; klimatyzowanym, turystycznym (lotnicze siedzenia, barek, video)",
+    "8 Noclegów w hotelach i domach pielgrzyma w pokojach 2, 3 lub 4 osobowych (na zyczenie)",
+    "8 Śniadań wzmocnionych i 8 obiadokolacji",
+    "Ubezpieczenie KL +NNW+BP",
+    "Opieka duchowa kapłana",
+    "Opieka pilota"
+  ],
+  "priceExcludes": [
+    "Napojów do kolacji,",
+    "Biletow wstępów, tax-y, system TourGuide, 75 Euro JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "title": "USA – Zachodnie Wybrzeże",
+  "continent": "north-america",
+  "country": "USA (Zachodnie Wybrzeże)",
+  "durationDays": 16,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": null,
+  "currency": "PLN",
+  "priceNote": "Cena na zapytanie",
+  "summary": null,
+  "image": "/images/trips/usa-zachodnie-wybrzeze.webp",
+  "imageAlt": "USA – Zachodnie Wybrzeże",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "",
+      "description": "Zbiórka na wybranym lotnisku . Wylot do Los Angeles. Przylot do Los Angeles. Transfer do hotelu. Kolacja i nocleg.\n[obraz: samolot2.png]"
+    },
+    {
+      "day": 2,
+      "title": "",
+      "description": "Śniadanie. Po śniadaniu całodzienne zwiedzanie Los Angeles: Beverly Hills, Sunset Blvd., Hollywood, Chiński Teatr, Aleja Gwiazd i słynne plaże. Kolacja i nocleg. Zwiedzanie katedry Matki Bożej królowej Aniołów. Msza Święta. Kolacja i nocleg."
+    },
+    {
+      "day": 3,
+      "title": "",
+      "description": "Śniadanie. Przejazd przez pustynię Mojave i zwiedzanie Joshua Tree National Park. Dalszy przejazd przez pustynię Sonora do stolicy Arizony- Phoenix. Kolacja i nocleg. Msza Święta."
+    },
+    {
+      "day": 4,
+      "title": "",
+      "description": "Śniadanie. Krótkie zwiedzanie Phoenix m.in. Świątyni Narodowej St. Mary’s Basilica. Przejazd do najsłynniejszego kanionu na świecie – Kanionu Kolorado. Podziwianie bezkresnych ścian kanionu z najciekawszych punktów widokowych. Następnie przejazd przez tereny należące do rezerwatu Indian Navajo i Hopi. Kolacja i nocleg. Msza Święta."
+    },
+    {
+      "day": 5,
+      "title": "",
+      "description": "Śniadanie. Dotarcie do słynnych -czerwonych skał” w Dolinie Pomników, znanych z licznych filmów kręconych w krajobrazach Arizony – Monument Valley. Msza Święta na terenie rezerwatu indiańskiego Navajo. Zwiedzanie pięknego rezerwatu indiańskiego kanionu De Chelly, gdzie nakręcono słynny film -Złoto MacKenny”. Kolacja i nocleg w stanie Nowy Meksyk."
+    },
+    {
+      "day": 6,
+      "title": "",
+      "description": "Śniadanie. Przejazd do Santa Fe. Zwiedzanie tego jednego z ładniejszy miast Zachodniej Ameryki m.in. Katedry. Wieczorem kolacja i nocleg."
+    },
+    {
+      "day": 7,
+      "title": "",
+      "description": "Śniadanie. Przejazd i zwiedzanie malutkiego Sanktuarium de Chimayo w górach Sangre de Christo, odwiedzanego przez tysiące pielgrzymów z całego świata. Msza Święta. Przejazd i zwiedzanie znajdującego się na liście UNESCO Parku Narodowego Mesa Verde – prehistoryczne indiańskie pałace klifowe oraz jednego z najstarszych miast indiańskich w Ameryce, stale zamieszkanego przez Indian od ponad tysiąca lat – Taos Pueblo, znajdującego się również na liście UNESCO. Kolacja i nocleg."
+    },
+    {
+      "day": 8,
+      "title": "",
+      "description": "Śniadanie. Przejazd do stanu Utah, w którym spotkamy się z niepowtarzalnym krajobrazami Parku Narodowego Łuków Naturalnych. Przejazd na kolację i nocleg do Salt Lake City. Wieczorny spacer po mieście."
+    },
+    {
+      "day": 9,
+      "title": "",
+      "description": "Śniadanie. Wczesnym rankiem panoramiczny przejazd przez światową stolicę Mormonów – Salt Lake City. Przejazd do Parku Narodowego Yellowstone. Zwiedzanie najstarszego i jednego z najbardziej popularnych parków narodowych świata: słynne gejzery, gorące źródła i błota. Możliwość zobaczenia dziko żyjących zwierząt m.in. słynnych amerykańskich bizonów. Nocleg w bungalowach na terenie parku. Kolacja."
+    },
+    {
+      "day": 10,
+      "title": "",
+      "description": "Śniadanie. Przejazd przez tereny Parku Narodowego Teton na nocleg do Salt Lake City. Możliwość wieczornego spaceru po mieście. Kolacja i nocleg."
+    },
+    {
+      "day": 11,
+      "title": "",
+      "description": "Śniadanie. Całodzienny przejazd przez malownicze tereny olbrzymiej północnej Pustyni Wielkiej Kotliny do -największego małego miasteczka na świecie” – Reno, miejsca, w którym narodziły się gry hazardowe. Wieczorne zwiedzanie Reno. Kolacja i nocleg"
+    },
+    {
+      "day": 12,
+      "title": "",
+      "description": "Śniadanie. Przejazd do autentycznego i największego w Ameryce miasta-widma z czasów Dzikiego Zachodu – Bodie. Podziwianie dziwacznego jeziora Mono. Kolacja i nocleg w okolicach Parku Narodowego Yosemite."
+    },
+    {
+      "day": 13,
+      "title": "",
+      "description": "Śniadanie. Zwiedzanie Parku Narodowego Yosemite z Doliną Yosemite (lista UNESCO) – jedno z najpiękniejszych miejsc na świecie: największy wodospad w Ameryce Północnej i gigantyczne sekwoje. Przejazd na kolację i nocleg w okolicy San Francisco. Kolacja i nocleg."
+    },
+    {
+      "day": 14,
+      "title": "",
+      "description": "Śniadanie. Msza Święta w starej oryginalnej hiszpańskiej misji Dolores.\nZwiedzanie tego najpiękniejszego miasta Stanów Zjednoczonych m. in. Golden Gate Bridge i Lombard Street, Rosyjskie Wzgórza, Dzielnica Chińska. Po południu czas wolny na zakupy. Kolacja i nocleg w San Francisco."
+    },
+    {
+      "day": 15,
+      "title": "",
+      "description": "Śniadanie. Przejazd na lotnisko i odlot do kraju."
+    },
+    {
+      "day": 16,
+      "title": "",
+      "description": "Przylot do Polski."
+    }
+  ],
+  "priceIncludes": [
+    "śniadania i kolacje",
+    "opieka pilota-przewodnika na całej trasie",
+    "transport klimatyzowanym samochodem lub autokarem",
+    "bilety wstępu",
+    "hotele 3*",
+    "pokoje dwuosobowe z łazienką",
+    "rezerwacje miejsc w kościołach lub hotelach dla potrzeb odbycia codziennej Mszy Świętej"
+  ],
+  "priceExcludes": [
+    "JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

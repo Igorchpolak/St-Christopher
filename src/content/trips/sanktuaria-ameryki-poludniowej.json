@@ -1,0 +1,105 @@
+{
+  "title": "Sanktuaria Ameryki Południowej",
+  "continent": "south-america",
+  "country": "Brazylia, Argentyna, Chile, Peru",
+  "durationDays": 15,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": null,
+  "currency": "PLN",
+  "priceNote": "Cena na zapytanie",
+  "summary": null,
+  "image": "/images/trips/sanktuaria-ameryki-poludniowej.jpg",
+  "imageAlt": "Sanktuaria Ameryki Południowej",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "",
+      "description": "Zbiórka na lotnisku w Warszawie. Wylot do Rio de Janeiro. Późnym wieczorem przylot i transfer do hotelu. Kolacja i nocleg."
+    },
+    {
+      "day": 2,
+      "title": "",
+      "description": "Śniadanie. Zwiedzanie słynącego z karnawału i przepięknego położenia Rio. Przejazd kolejką na górę Corovado, na której znajduje górujący nad miastem pomnik Chrystusa Zbawiciela. Czas na wspaniałe widoki na miasto. Przejazd do centrum miasta i zwiedzanie m.in. Katedry św. Sebastiana, słynnego stadionu piłkarskiego Maracany oraz sambodromu, na którym odbywa się karnawał. Przejazd kolejką na szczyt Głowę Cukru, z którego roztaczają się widoki na leżące między górami a oceanem miasto samby. Kolacja i nocleg."
+    },
+    {
+      "day": 3,
+      "title": "",
+      "description": "Śniadanie. Przelot do Sao Paolo i przejazd do najważniejszego miejsca kultu religijnego w Brazylii – sanktuarium Matki Bożej z Aparecida. Pobyt w Sanktuarium. Wieczorem przejazd do Sao Paolo. Kolacja i nocleg."
+    },
+    {
+      "day": 4,
+      "title": "",
+      "description": "Śniadanie. Przejazd wcześnie rano na lotnisko i przelot nad wodospady Iguazu. Po przylocie transfer do hotelu. Po krótkiej przerwie wyprawa nad same wodospady Iguazu. Podziwianie tego cudu natury leżącego na pograniczu trzech państw w samym środku dżungli. Wieczorem wyjście na folklorystyczną kolację. Nocleg."
+    },
+    {
+      "day": 5,
+      "title": "",
+      "description": "Śniadanie. Od rana podziwianie wodospadów po stronie argentyńskiej m.in. najbardziej imponującego Diabelskiego Gardła. Wieczorem powrót na kolację i nocleg do hotelu."
+    },
+    {
+      "day": 6,
+      "title": "",
+      "description": "Śniadanie. Przejazd przez region, w którym jezuici zakładali słynne misje. Zwiedzanie ruin jednej z misji jezuitów, która była tłem wydarzeń słynnego filmu -Misja”. Wieczorem kolacja i nocleg w Posadas."
+    },
+    {
+      "day": 7,
+      "title": "",
+      "description": "Śniadanie. Przejazd na lotnisko i przelot do Buenos Aires (11:28 AA). Po przylocie przejazd do miejsca pielgrzymek tysięcy Argentyńczyków – sanktuarium Matki Bożej w Lujan. Kolacja i nocleg w Buenos Aires.\nWieczorem fakultatywnie wyjście na pokaz tańca tango."
+    },
+    {
+      "day": 8,
+      "title": "",
+      "description": "Śniadanie. Przepłynięcie promem przez deltę Rio de la Plata do Urugwaju. Zwiedzanie znajdującej się na liście UNESCO centrum historycznego Colonii. Spacer malowniczymi uliczkami tego najpiękniejszego miasteczka Urugwaju. Wieczorem powrót na kolację i nocleg do Buenos Aires."
+    },
+    {
+      "day": 9,
+      "title": "",
+      "description": "Śniadanie. Zwiedzania stolicy kraju: Av. 9 de Julio, Katedra, Av. Santa Fe, słynny różowy Pałac Rządowy, z którego balkonu przemawiała Evita Peron, Plaza de Mayo, budynek Kongresu oraz dzielnica San Telmo – miejsce, w którym narodziło się tango. Wczesnym popołudniem przejazd na lotnisko i odlot do Mendonzy. Przylot do stolicy regionu argentyńskiego wina. Transfer do hotelu. Kolacja i nocleg."
+    },
+    {
+      "day": 10,
+      "title": "",
+      "description": "Śniadanie. Zwiedzanie tego jednego z najpiękniejszych miast Argentyny: Stare Miasto, Alameda, Bariio Civico, park generała San Martin, Wzgórze Zwycięstwa, amfiteatr Franka Romero Day. Po południu czas na indywidualne spacery. Kolacja i nocleg."
+    },
+    {
+      "day": 11,
+      "title": "",
+      "description": "Śniadanie. Przejazd przez Andy do Chile. Po drodze podziwianie andyjskich krajobrazów górskich: przystanki na punktach widokowych Cacheuta, Potrerillos, Uspallata. Przejazd przez wysokogórskie centrum narciarskie Los Penitentes i dalsza podróż do fascynującej formacji geologicznej – Mostu Inkaskiego. Wjazd do Parku Regionalnego Aconcagua, skąd można podziwiać zapierające dech w piersiach widoki na najwyższy szczyt Ameryki – Aconcagua. Podczas dalszego przejazdu wspaniałe widoki na lagunę Portillo oraz minięcie ostatniej miejscowości po stronie argentyńskiej Las Cuevas. Jeżeli warunki klimatyczne pozwolą dotarcie do figury Cristo Redentor, która majestatycznie spogląda ze szczytów andyjskich na oba kraje. Pokonanie ostatnich szczytów odbędzie się tunelem łączącym Argentynę z Chile. Po stronie chilijskiej ostry zjazd ślimakami na obszary porośnięte winoroślą. Możliwość zatrzymania się w jednej z winnic wraz z degustacją słynnych chilijskich win. Po tym pełnym wrażeń dniu powrót na zasłużoną kolację i odpoczynek w Santiago."
+    },
+    {
+      "day": 12,
+      "title": "",
+      "description": "Śniadanie. Zwiedzanie miasta: Plaza de Armas, Katedra, budynek Poczty Głównej, Plaza de la Constitucion y Plaza Libertad. Moneda. Przejazd reprezentacyjną ulicą miasta, wzdłuż której znajdują się najważniejsze budynki m.in. Pałac rządowy La, Uniwersytet, Biblioteka Narodowa. Odwiedzenie kościoła św. Franciszka, w którym znajduje się figurka patronki miasta Virgen de Socorro. Krótki pobyt na wzgórzu św. Łucji oraz przejazd na górujące nad miastem wzgórze św. Krzysztofa, gdzie znajduje się Sanktuarium Niepokalanego Poczęcia Maryi. Powrót na kolację i nocleg do hotelu."
+    },
+    {
+      "day": 13,
+      "title": "",
+      "description": "Śniadanie. Przejazd malowniczą drogą otoczoną winnicami, z których pochodzą najsłynniejsze gatunki win chilijskich do miejscowości Valparaiso. Zwiedzanie tego jednego z najstarszych miast w Chile, które jest ważnym zapleczem portowym dla stolicy kraju. Odwiedzenie m.in. Katedry, Plaza Victoria oraz punktów widokowych na wzgórzu, które góruje nad miastem. Potem przejazd do kurortu Vina del Mar. Spacer po eleganckich uliczkach tego miasteczka. Powrót na kolację i nocleg do Santiago."
+    },
+    {
+      "day": 14,
+      "title": "",
+      "description": "Przejazd na lotnisko i odlot do Sao Paolo lub Rio de Janeiro i następnie do Europy."
+    },
+    {
+      "day": 15,
+      "title": "",
+      "description": "Przylot do Polski"
+    }
+  ],
+  "priceIncludes": [
+    "śniadania i kolacje",
+    "opieka pilota-przewodnika na całej trasie",
+    "transport klimatyzowanym samochodem lub autokarem",
+    "hotele 3*/4*",
+    "pokoje dwuosobowe z łazienką",
+    "bilety wstępów do zwiedzanych obiektów i parków narodowych",
+    "rezerwacje miejsc dla potrzeb codziennej Mszy Świętej"
+  ],
+  "priceExcludes": [
+    "JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

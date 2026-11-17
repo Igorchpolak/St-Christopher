@@ -1,12 +1,14 @@
 import type { MetadataRoute } from "next";
 
+import { getAllTripSlugs } from "@/lib/api";
 import { getSiteUrl } from "@/lib/seo";
 
-// TODO: dodać przyszłe podstrony (/pielgrzymki/[slug], /blog/[slug], /poradnik,
-// /o-nas), gdy powstaną – najlepiej generując wpisy z danych (getTripsByContinent,
-// getBlogPosts), a nie z listy ręcznej.
-export default function sitemap(): MetadataRoute.Sitemap {
+/**
+ * Mapa strony: strona główna + podstrony wyjazdów generowane z CMS-a.
+ */
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = getSiteUrl();
+  const slugs = await getAllTripSlugs();
 
   return [
     {
@@ -15,5 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    ...slugs.map((slug) => ({
+      url: `${base}/pielgrzymki/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    })),
   ];
 }

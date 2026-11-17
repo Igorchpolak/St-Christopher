@@ -60,7 +60,9 @@ export default function ContinentExplorer({ continents, trips }: ContinentExplor
     () =>
       trips
         .filter((trip) => trip.continent === selectedId)
-        .sort((a, b) => a.startDate.localeCompare(b.startDate)),
+        .sort((a, b) =>
+          (a.startDate ?? "9999-12-31").localeCompare(b.startDate ?? "9999-12-31"),
+        ),
     [trips, selectedId],
   );
 

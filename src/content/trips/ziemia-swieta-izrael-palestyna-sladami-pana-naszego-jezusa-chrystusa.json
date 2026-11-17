@@ -1,0 +1,73 @@
+{
+  "title": "Ziemia Święta, Izrael, Palestyna – Śladami Pana Naszego Jezusa Chrystusa",
+  "continent": "asia",
+  "country": "Izrael, Palestyna",
+  "durationDays": 8,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": null,
+  "currency": "PLN",
+  "priceNote": "",
+  "summary": null,
+  "image": "/images/trips/ziemia-swieta-izrael-palestyna-sladami-pana-naszego-jezusa-chrystusa.jpg",
+  "imageAlt": "Ziemia Święta, Izrael, Palestyna – Śladami Pana Naszego Jezusa Chrystusa",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "Zbiórka grupy na lotnisku w KRK/KTW/BTS/WAW. Przelot do Izraela.",
+      "description": "Przejazd do Betlejem. Obiadokolacja i nocleg w Betlejem."
+    },
+    {
+      "day": 2,
+      "title": "",
+      "description": "(S), zwiedzanie Betlejem: Bazylika Narodzenia Pana Jezusa, Grota Mleczna, Pole Pasterzy. Przejazd autokarem do Ain Karem, zwiedzanie miejsca narodzenia Jana Chrzciciela i miejsca nawiedzenia Elżbiety przez Matkę Bożą. Obiadokolacja (K i N) i nocleg w Betlejem."
+    },
+    {
+      "day": 3,
+      "title": "(S), wyjazd autokarem do Jerozolimy: Betfage, Góra Oliwna – zwiedzanie kościoła Pater Noster, nawiedzenie kościoła Dominus Flevit tj. miejsca gdzie Pan Jezus zapłakał nad Jerozolimą. Zwiedzanie Ogrodu Getsemani – bazyliki Agonii Pana Jezusa, kościoła Grobu NMP. Przejście pod Ścianę Płaczu, Góra Syjon: zwiedzanie Wieczernika i bazyliki Zaśnięcia NMP. Kościół św. Piotra – In Gallicantu.",
+      "description": "Obiadokolacja i nocleg (K i N) w Betlejem."
+    },
+    {
+      "day": 4,
+      "title": "(S), wyjazd autokarem do Jerozolimy: zwiedzanie Starego Miasta. Kościół Litostrotos – miejsce sądu Pana Jezusa. Via Dolorosa – Droga Krzyżowa, bazylika Grobu Świętego na Kalwarii – Golgocie. Kościół św. Anny i Ecce homo. Obiadokolacja i nocleg (K i N) w Betlejem.",
+      "description": "[obraz: ziemia_swieta2.jpg]"
+    },
+    {
+      "day": 5,
+      "title": "",
+      "description": "(S), wyjazd w okolice jeziora Genezaret: Góra Błogosławieństw, Kafarnaum – dom św. Piotra, Tabga – miejsce cudownego rozmnożenia chleba i ryb, kościół Prymatu św. Piotra. Nad jeziorem możliwość zakupienia obiadu – ryby św. Piotra, oraz możliwość rejsu po jeziorze. Następnie Jardenit (Jordan) – odnowienie przyrzeczeń chrzcielnych. Obiadokolacja i nocleg (K i N) w Nazarecie (lub tyberiadzkie)."
+    },
+    {
+      "day": 6,
+      "title": "",
+      "description": "(S), nawiedzenie miejsca pierwszego cudu w Kanie Galilejskiej. Następnie zwiedzanie Nazaretu: Bazylika Zwiastowania, kościół św. Józefa, wyjazd na Górę Tabor: zwiedzanie kościoła Przemienienia Pańskiego. Przejazd w kierunku Hajfy. Góra Karmel. Przejazd przez Cezareę do Betlejem. Obiadokolacja i nocleg (K i N) w Betlejem."
+    },
+    {
+      "day": 7,
+      "title": "",
+      "description": "(S), wyjazd autokarem do Betanii – grób Łazarza. Następnie przejazd przez Pustynię Judzką, z krótkim postojem w Jerycho. Przejazd nad Morze Martwe z możliwością kąpieli. Powrót do hotelu. Obiadokolacja (K i N)."
+    },
+    {
+      "day": 8,
+      "title": "",
+      "description": "(S), śniadanie. Przejazd na lotnisko. Przelot do kraju. Zakończenie pielgrzymki."
+    }
+  ],
+  "priceIncludes": [
+    "Bilet lotniczy,",
+    "Transfery klimatyzowanym autokarem po Ziemi Świętej,",
+    "zakwaterowanie w pokojach dwu- i trzyosobowych, w hotelach ~ 3*/4 *",
+    "wyżywienie; 7 Śniadań (bufet) i 7 obiadokolacji (bufet),",
+    "opieka pilota,",
+    "opiekę duchową Kapłana",
+    "ubezpieczenie kosztów leczenia (KL) do kwoty 15 000,- € /nie dotyczy chorób przewlekłych*/+ NW *Osoby przewlekle chore, oraz osoby powyżej 65 lat podlegają obowiązkowemu doubezpieczeniu- ok. 195 zl/osob."
+  ],
+  "priceExcludes": [
+    "wydatków własnych, napojów do kolacji",
+    "biletów wstępów, tax, zwyczajowych napiwków-135$ /płatne obligatoryjnie w Izraelu u pilota grupy/.",
+    "opcja; Ejlat-Morze Czerwone; dopłata 85$/osobę",
+    "przy zakwaterowaniu w hotelach ~ 4*/5 * (na życzenie-dopłata 175 $/osobę), JAK PRZYGOTOWAĆ SIĘ NA PIELGRZYMKĘ"
+  ]
+}

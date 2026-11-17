@@ -1,0 +1,19 @@
+{
+  "title": "Duchowe podróże Portugalii",
+  "continent": "europe",
+  "country": "Portugalia",
+  "durationDays": 8,
+  "startDate": "2027-06-01",
+  "endDate": "2027-06-08",
+  "groupSize": 40,
+  "priceFrom": 1990,
+  "currency": "PLN",
+  "priceNote": null,
+  "summary": null,
+  "image": "/images/trips/duchowe-podroze-portugalii.svg",
+  "imageAlt": "Sanktuarium w Fatimie o zmierzchu",
+  "featured": true,
+  "program": [],
+  "priceIncludes": [],
+  "priceExcludes": []
+}

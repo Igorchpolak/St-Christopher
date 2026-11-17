@@ -1,0 +1,19 @@
+{
+  "title": "Ziemia Święta",
+  "continent": "asia",
+  "country": "Izrael",
+  "durationDays": 10,
+  "startDate": "2027-05-10",
+  "endDate": "2027-05-19",
+  "groupSize": 8,
+  "priceFrom": 3290,
+  "currency": "PLN",
+  "priceNote": null,
+  "summary": null,
+  "image": "/images/trips/ziemia-swieta.svg",
+  "imageAlt": "Widok na Jerozolimę i Kopułę Skały",
+  "featured": true,
+  "program": [],
+  "priceIncludes": [],
+  "priceExcludes": []
+}

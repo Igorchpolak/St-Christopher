@@ -1,0 +1,94 @@
+{
+  "title": "Śladami papieża pielgrzyma – Meksyk, Guadalupe",
+  "continent": "north-america",
+  "country": "Meksyk",
+  "durationDays": 12,
+  "startDate": null,
+  "endDate": null,
+  "groupSize": null,
+  "priceFrom": 1355,
+  "currency": "USD",
+  "priceNote": "1355 USD + 4899,-zł /min 15 uczest./",
+  "summary": null,
+  "image": "/images/trips/sladami-papieza-pielgrzyma-meksyk-guadalupe.jpg",
+  "imageAlt": "Śladami papieża pielgrzyma – Meksyk, Guadalupe",
+  "featured": false,
+  "program": [
+    {
+      "day": 1,
+      "title": "KTW/KRK/Warszawa(Via stolica Europejska)-Meksyk",
+      "description": "Przylot do miasta Meksyk, powitanie na lotnisku, transfer do hotelu, zakwaterowanie.\nKolacja (2-daniowa) i nocleg."
+    },
+    {
+      "day": 2,
+      "title": "Mexico City – Bazylika M. B. z GUADALUPE – Teotihuacan",
+      "description": "Śniadanie w hotelu. Wizyta na Placu Trzech Kultur, miejsca będącego świadkiem wielu ważnych dla Meksyku wydarzeń historycznych. Przejazd do Sanktuarium Matki Bożej z Guadalupe; Msza Święta w jednej z górnych kaplic, a potem zwiedzanie tzw. -miasteczka” Matki Bożej z Guadalupe, na które składają się piękne kościoły i ogrody związane z kultem Madonny objawionej na Tepeyaku. Czas wolny na zakup dewocjonaliów. Przejazd do prehiszpańskiego miasta Teotihuacan, oddalonego o 48 km od stolicy. To dawne centrum ceremonialno-administracyjne Indian Teotihuacanos, będące na liście Światowego Dziedzictwa Kultury UNESCO, jest jedna z najczęściej odwiedzanych stref archeologicznych w całej Ameryce Łacińskiej. Wspaniale piramidy Słońca, Księżyca, Pierzastego Węża są najbardziej fotografowanymi budowlami w Meksyku. Obiadokolacja (szwedzki stół) w pobliżu piramid: Powrót do hotelu. Nocleg."
+    },
+    {
+      "day": 3,
+      "title": "Muzeum Antropologii i Historii – City Tour – Xochimilco",
+      "description": "Śniadanie w hotelu. Sanktuarium Matki Bożej z Guadalupe – Msza Św., Wizyta w Narodowym Muzeum Antropologii i Historii uważanym za jedno z najlepiej wyposażonych i zorganizowanych w całej Ameryce Łacińskiej, z imponującą kolekcja sztuki prehiszpańskiej oraz zbiorami etnograficznymi dotyczącymi dawnych i współczesnych Indian meksykańskich. Zwiedzanie części historycznej Meksyku: Plac Zocalo, Pałac Narodowy z freskami słynnego Diego Rivery, Katedra Metropolitalna, Msza Święta. Po południu, przejazd do dzielnicy Xochimilco i spływ kolorowymi -gondolami” po dawnych kanałach azteckich, wśród niegdyś pływających ogrodów indiańskich. Obiadokolacja na łodziach w stylu meksykańskim(lub w hotelu). Powrót do hotelu. Nocleg."
+    },
+    {
+      "day": 4,
+      "title": "Tepotzotlan – Queretaro",
+      "description": "Śniadanie. Wyjazd w kierunku miasteczka Tepotzotlan. Zwiedzanie Muzeum Wicekrólestwa z ciekawym i bardzo bogatym zbiorem sztuki kolonialnej oraz pięknego barokowego kościoła Św. Ksawerego. Przejazd do kolonialnego miasta Queretaro, City Tour po centrum historycznym: Kościół i klasztor Świętego Krzyża, w którego ogrodzie znajdują się unikalne drzewa z kolcami w postaci autentycznego krzyża, Plac Broni, zabytkowy Akwedukt, itp. Msza Św. Kolacja. Powrot do miasta Meksyk na nocleg."
+    },
+    {
+      "day": 5,
+      "title": "Mexico City – Puebla – Cholula-Tonantzintla",
+      "description": "Sniadanie. Przejazd do Puebli, zwanej “Miastem Aniołów”, ulubionego miejsca Papieza, Jana Pawla II. Spacer po miescie: Katedra, kosciol Św. Dominika z przepiękna “Kaplica Różancowa”, nazwana przez Fryderyka Humboldta w XIX w., “Ósmym Cudem Świata”; Słodka Uliczka. Wizyta w miasteczku Cholula, ktore posiada największa pod względem objętosci, piramidę na świecie. Wizyta w Tonantzintla – pięknym kościółku w stylu baroku folklorystycznego.\nKolacja i nocleg."
+    },
+    {
+      "day": 6,
+      "title": "Cuernavaca- Cacahuamilpa-Taxco",
+      "description": "Śniadanie. Przejazd do miasta Cuernavaca, zwanym “Miastem Wiecznej Wiosny”, wizyta w katedrze (unikalne freski z poczatku XVII w.), spacer po kolonialnym Placu Broni, ogladanie z zewnatrz dawnego palacu konkwistadora Hermana Cortesa. Wyjazd z miasta w kierunku jaskin Cacahuamilpa, najwiekszych i najpiękniejszych w całej Ameryce Łacinskiej, stanowiących wielokrotnie scenerie roznych filmow i koncertów znanych swiatowych artystów. Przejazd do górniczego Taxco, meksykanskiej “stolicy srebra”, spacer po Taxco, Msza Św. w kapiącym od złota barokowym kościele Św. Pryski i Św. Sebastiana. Kolacja, nocleg."
+    },
+    {
+      "day": 7,
+      "title": "Taxco – Acapulco",
+      "description": "Śniadanie. Msza Św. w kościele Św. Pryski i Św. Sebastiana, malowniczo położonym na wzgórzach. Przejazd do Acapulco, najsłynniejszego kurortu nad Oceanem Spokojnym. Wieczorem, pokaz mrożących krew w żyłach skoków do wody ze skały La Quebrada, które rozsławily Acapulco na cały świat. Kolacja, nocleg."
+    },
+    {
+      "day": 8,
+      "title": "9- 10: Acapulco",
+      "description": "Śniadanie. Msza Św., odpoczynek nad morzem w Hotelu 5* All Inclusive (trzy posiłki dziennie). Możliwość wykupienia wycieczek fakultatywnych (rejs po Zatoce Św. Lucji, w celu poznania roznych atrakcji Acapulco od strony morza; Laguna Coyuca, stanowiaca bogaty rezerwat fauny i flory tropikalnej, gdzie kręcono, m.in. trzecia cześć słynnego filmu “Rambo”). Wczesnym popołud. wyjazd do Mexico City, obiadokolacja, nocleg"
+    },
+    {
+      "day": 9,
+      "title": "9- 10: Acapulco",
+      "description": "Śniadanie. Msza Św., odpoczynek nad morzem w Hotelu 5* All Inclusive (trzy posiłki dziennie). Możliwość wykupienia wycieczek fakultatywnych (rejs po Zatoce Św. Lucji, w celu poznania roznych atrakcji Acapulco od strony morza; Laguna Coyuca, stanowiaca bogaty rezerwat fauny i flory tropikalnej, gdzie kręcono, m.in. trzecia cześć słynnego filmu “Rambo”). Wczesnym popołud. wyjazd do Mexico City, obiadokolacja, nocleg"
+    },
+    {
+      "day": 10,
+      "title": "9- 10: Acapulco",
+      "description": "Śniadanie. Msza Św., odpoczynek nad morzem w Hotelu 5* All Inclusive (trzy posiłki dziennie). Możliwość wykupienia wycieczek fakultatywnych (rejs po Zatoce Św. Lucji, w celu poznania roznych atrakcji Acapulco od strony morza; Laguna Coyuca, stanowiaca bogaty rezerwat fauny i flory tropikalnej, gdzie kręcono, m.in. trzecia cześć słynnego filmu “Rambo”). Wczesnym popołud. wyjazd do Mexico City, obiadokolacja, nocleg"
+    },
+    {
+      "day": 11,
+      "title": "Mexico City -Europa",
+      "description": "Śniadanie. Przejazd do Sanktuarium Matki Bozej z Guadalupe- Niepokalane Poczęcie Najświętszej Maryi Panny; Godzina Łaski-8 grudnia od 12.00 do 13.00. Matka Boża, objawiając się w Święto Niepokalanego Poczęcia, 8 grudnia 1947 r., pielęgniarce Pierinie Gilli w Montichiari we Włoszech powiedziała:\n„Życzę sobie, aby każdego roku w dniu 8 grudnia, w południe obchodzono Godzinę Łaski dla całego świata. Dzięki modlitwie w tej godzinie ześlę wiele łask dla duszy i ciała. Będą masowe nawrócenia. Dusze zatwardziałe i zimne jak marmur poruszone będą łaską Bożą i znów staną się wierne i miłujące Boga. Pan, mój Boski Syn Jezus, okaże wielkie miłosierdzie, jeżeli dobrzy ludzie będą się modlić za bliźnich. Jest moim życzeniem, aby ta Godzina była rozpowszechniona. Wkrótce ludzie poznają wielkość tej Godziny łaski. Jeśli ktoś nie może w tym czasie przyjść do kościoła, niech modli się w domu”.\nMsza Święta. Transfer na lotnisko, wylot do Europy."
+    },
+    {
+      "day": 12,
+      "title": "KTW/KRK/Warszawa(Via stolica Europejska)",
+      "description": "Zakończenie pielgrzymki"
+    }
+  ],
+  "priceIncludes": [
+    "Noclegi w hotelach 4* i 5* ; pokoje dwuosobowe z łazienką;",
+    "Przelot na trasie Polska -Mexico City- Polska",
+    "Obfite śniadania, 3-daniowe kolacje (z wyjatkiem dnia przylotu, gdzie kolacja bedzie 2-daniowa); w Acapulco posiłki zgodnie z formula All Inclusive (3 posilki dziennie + tzw. wolny bar drinków i napojów bezalkoholowych w wiekszosci hotelowych barów i restauracji);",
+    "Kawę i herbatę w czasie śniadań i kolacji;",
+    "Transfery i przejazdy klimatyzowanym autokarem, wyposażonym w odtwarzacz CD, DVD i mikrofon;",
+    "Opiekę polskojęzycznego przewodnika podczas całego pobytu;",
+    "Msze Święte w kościołach, ewentualnie w specjalnie zamówionych salach w hotelach;",
+    "godzinny rejs w Xochimilco i 5 piosenek Los Mariachis",
+    "KL+NNW /nie dotyczy chorób przewlekłych-doplata 175zł/"
+  ],
+  "priceExcludes": [
+    "Napiwków dla ; przewodnika i kierowcy, po 2 $/os/dzień",
+    "Wszystkie bilety wstępów, bagażowi w hotelach = 95$ /obligatoryjnie/",
+    "Dopłata do jedynki 395 $"
+  ]
+}
