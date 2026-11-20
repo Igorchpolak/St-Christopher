@@ -4,10 +4,13 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import TripCard from "@/components/cards/TripCard";
-import Carousel from "@/components/ui/Carousel";
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { Continent, ContinentId, Trip } from "@/types";
+
+/** Maksymalna liczba wyjazdów pokazywanych pod mapą (reszta na /pielgrzymki). */
+const MAX_VISIBLE_TRIPS = 15;
 
 /**
  * Mapa ładowana dynamicznie (next/dynamic) – d3-geo, topojson-client i
@@ -65,6 +68,10 @@ export default function ContinentExplorer({ continents, trips }: ContinentExplor
         ),
     [trips, selectedId],
   );
+
+  // Pod mapą pokazujemy najwyżej 15 wyjazdów; pozostałe są na /pielgrzymki.
+  const visibleTrips = continentTrips.slice(0, MAX_VISIBLE_TRIPS);
+  const hasMoreTrips = continentTrips.length > MAX_VISIBLE_TRIPS;
 
   // Po kliknięciu pinezki: przewiń do bloku z wyjazdami, jeśli nie jest
   // w pełni widoczny (scroll-margin-top kompensuje sticky header).
@@ -147,15 +154,13 @@ export default function ContinentExplorer({ continents, trips }: ContinentExplor
                 key={selectedId}
                 className="motion-safe:animate-[fade-slide-in_0.45s_ease-out_both]"
               >
-                <Carousel
-                  ariaLabel={`Wyjazdy: ${selected?.name ?? ""}`}
-                  itemsPerView={{ base: 1, sm: 2, lg: 4, xl: 5 }}
-                  resetKey={selectedId}
-                >
-                  {continentTrips.map((trip) => (
-                    <TripCard key={trip.id} trip={trip} />
+                <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {visibleTrips.map((trip) => (
+                    <li key={trip.id}>
+                      <TripCard trip={trip} />
+                    </li>
                   ))}
-                </Carousel>
+                </ul>
               </div>
             ) : (
               <div className="mx-auto max-w-md text-center">
@@ -171,6 +176,15 @@ export default function ContinentExplorer({ continents, trips }: ContinentExplor
               </div>
             )}
           </div>
+
+          {/* Więcej niż 15 wyjazdów w regionie – resztę pokazuje podstrona /pielgrzymki. */}
+          {hasMoreTrips && (
+            <div className="mt-8 text-center md:mt-10">
+              <Button href="/pielgrzymki" variant="gold">
+                Zobacz wszystkie
+              </Button>
+            </div>
+          )}
         </div>
       </Container>
     </section>

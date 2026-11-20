@@ -18,7 +18,7 @@ export default async function UpcomingTrips() {
         <SectionHeading
           id="najblizsze-wyjazdy-title"
           title="Najbliższe wyjazdy"
-          linkHref="/#pielgrzymki"
+          linkHref="/pielgrzymki"
           linkLabel="Zobacz wszystkie"
         />
         <div className="mt-8 md:mt-10">

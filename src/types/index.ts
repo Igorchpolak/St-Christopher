@@ -67,6 +67,8 @@ export interface BlogPost {
   date: string;
   image: string;
   imageAlt: string;
+  /** Treść artykułu – akapity wyświetlane na /blog/[slug]. */
+  content: string[];
 }
 
 export interface NavItem {
@@ -96,8 +98,6 @@ export interface HeroConfig {
   videoSrc: string | null;
   videoSrcWebm: string | null;
   posterSrc: string;
-  /** Film w modalu "Zobacz film". */
-  filmUrl: string | null;
 }
 
 export interface SiteConfig {

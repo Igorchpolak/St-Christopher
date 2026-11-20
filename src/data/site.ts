@@ -12,10 +12,10 @@ export const site: SiteConfig = {
   ],
   nav: [
     { label: "Strona główna", href: "/" },
-    { label: "Pielgrzymki", href: "/#pielgrzymki" },
+    { label: "Pielgrzymki", href: "/pielgrzymki" },
     { label: "Poradnik", href: "/poradnik" },
     { label: "O nas", href: "/o-nas" },
-    { label: "Blog", href: "/#blog" },
+    { label: "Blog", href: "/blog" },
     { label: "Kontakt", href: "/#kontakt" },
   ],
   phones: [
@@ -47,9 +47,6 @@ export const site: SiteConfig = {
     videoSrc: "/video/guadalupe-santuario.mp4",
     videoSrcWebm: null,
     posterSrc: "/images/hero-poster.svg",
-    // Film w modalu "Zobacz film" – na razie ten sam plik co tło hero;
-    // TODO: podmienić, gdy dotrze docelowy film promocyjny.
-    filmUrl: "/video/guadalupe-santuario.mp4",
   },
   footerColumns: [
     {
@@ -66,7 +63,7 @@ export const site: SiteConfig = {
     {
       title: "Informacje",
       links: [
-        { label: "Pielgrzymki", href: "/#pielgrzymki" },
+        { label: "Pielgrzymki", href: "/pielgrzymki" },
         { label: "FAQ", href: "/#faq" },
         { label: "Polityka prywatności", href: "/#polityka-prywatnosci" },
         { label: "Warunki korzystania", href: "/#warunki-korzystania" },

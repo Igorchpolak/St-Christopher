@@ -1,0 +1,13 @@
+# Konfiguracja wdrożenia na Netlify (Next.js 16 + Keystatic).
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # LTS zgodne z wymaganiami Next.js 16 (lokalnie używamy nowszego).
+  NODE_VERSION = "22"
+
+# Oficjalny adapter Netlify dla Next.js (instalowany też jako devDependency,
+# aby wersja była przewidywalna i zgodna z Next 16).
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

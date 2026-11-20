@@ -68,7 +68,7 @@ export default async function TripPage({ params }: PageProps) {
     <div className="bg-white pb-16 pt-8 md:pt-12">
       <Container>
         <Link
-          href="/#pielgrzymki"
+          href="/pielgrzymki"
           className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-gold-500 hover:text-gold-600"
         >
           <ArrowLeft className="size-4" aria-hidden="true" />

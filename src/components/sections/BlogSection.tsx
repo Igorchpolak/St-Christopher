@@ -14,7 +14,7 @@ export default async function BlogSection() {
         <SectionHeading
           id="blog-title"
           title="Blog"
-          linkHref="/#blog"
+          linkHref="/blog"
           linkLabel="Zobacz wszystkie"
         />
         <div className="mt-8 md:mt-10">

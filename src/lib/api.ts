@@ -134,3 +134,17 @@ export async function getBlogPosts(limit = 3): Promise<BlogPost[]> {
     .slice(0, limit);
   return structuredClone(sorted);
 }
+
+/** Wszystkie wpisy blogowe od najnowszych (strona /blog). */
+export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  "use cache";
+  const sorted = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
+  return structuredClone(sorted);
+}
+
+/** Pojedynczy wpis blogowy po slugu (/blog/[slug]). */
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  "use cache";
+  const post = posts.find((item) => item.slug === slug);
+  return post ? structuredClone(post) : null;
+}

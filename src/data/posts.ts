@@ -1,6 +1,6 @@
 import type { BlogPost } from "@/types";
 
-/** Przykładowe wpisy blogowe (później: backend / CMS). */
+/** Wpisy blogowe (później: CMS / Keystatic). */
 export const posts: BlogPost[] = [
   {
     id: "post-001",
@@ -10,6 +10,12 @@ export const posts: BlogPost[] = [
     date: "2025-05-10",
     image: "/images/blog/pielgrzymka-wedrowka-ku-pokojowi.svg",
     imageAlt: "Pielgrzymi idący drogą o zachodzie słońca",
+    content: [
+      "Pielgrzymka to coś więcej niż podróż. To czas, w którym codzienny pośpiech zostaje za nami, a na pierwszy plan wysuwają się cisza, modlitwa i drugi człowiek. Wyruszamy z konkretnego miejsca, ale tak naprawdę wędrujemy także w głąb siebie.",
+      "Droga uczy cierpliwości. Nie wszystko dzieje się od razu, nie wszystkie trasy da się skrócić. Kolejne kilometry, wspólne posiłki i wieczorne nabożeństwa pomagają odzyskać rytm, którego często brakuje nam na co dzień. Właśnie w tej prostocie wiele osób odnajduje spokój.",
+      "Pielgrzymka jest też doświadczeniem wspólnoty. Grupa, z którą wyruszamy, staje się na kilka dni bliską rodziną. Wspólny śpiew, rozmowy w autokarze i wzajemna pomoc w drodze budują więzi, których nie da się zaplanować.",
+      "Wracamy do domu zmęczeni, ale inni. Z nowym spojrzeniem na to, co naprawdę ważne, i z pokojem, którego nie kupi żaden bilet. To właśnie dlatego ludzie pielgrzymują od stuleci – i dlaczego warto spróbować choć raz.",
+    ],
   },
   {
     id: "post-002",
@@ -19,6 +25,12 @@ export const posts: BlogPost[] = [
     date: "2025-04-24",
     image: "/images/blog/rozaniec-w-podrozy.svg",
     imageAlt: "Różaniec zwisający z plecaka pielgrzyma",
+    content: [
+      "Różaniec mieści się w kieszeni, a potrafi wypełnić całą podróż. W autokarze, w samolocie, na lotniskowym terminalu czy w kolejce do sanktuarium – zawsze można znaleźć chwilę, by sięgnąć po niego i oddać myśli w ręce Maryi.",
+      "Dla wielu pielgrzymów różaniec jest rytmem dnia. Poranna dziesiątka przed wyjazdem, cała część w drodze, wieczorna modlitwa przy sanktuarium. Nie chodzi o ilość, ale o regularność – o to, by droga miała swój duchowy rytm.",
+      "Warto zabrać różaniec, który jest nam bliski: pamiątkę z pierwszej komunii, prezent od babci, prosty sznur z drewnianymi paciorkami. Przedmiot dotknięty wieloletnią modlitwą przypomina, że nie jesteśmy w drodze sami.",
+      "Jeśli nie modlisz się różańcem na co dzień, pielgrzymka to dobry moment, by zacząć. Wystarczy jedna dziesiątka dziennie, odmówiona spokojnie, bez pośpiechu. Reszta przyjdzie sama.",
+    ],
   },
   {
     id: "post-003",
@@ -28,6 +40,12 @@ export const posts: BlogPost[] = [
     date: "2025-03-27",
     image: "/images/blog/pielgrzymka-z-pasja-wloskie-sanktuaria.svg",
     imageAlt: "Asyż – bazylika św. Franciszka na tle wzgórza",
+    content: [
+      "Włochy to kierunek, który potrafi połączyć modlitwę z zachwytem nad sztuką i krajobrazem. Rzym z bazylikami św. Piotra i św. Pawła za Murami, Asyż ze wzgórzami Umbrii, Loreto z domkiem Najświętszej Maryi Panny – każde z tych miejsc ma własny charakter i własną historię.",
+      "W Rzymie warto znaleźć czas nie tylko na największe świątynie, ale też na mniejsze kościoły, w których panuje cisza. Poranna Msza przy grobie św. Piotra albo wieczorna modlitwa w bazylice Santa Maria Maggiore zostają w pamięci na długo.",
+      "Asyż to z kolei miejsce, w którym łatwo zwolnić. Wąskie uliczki, kamienne domy i widoki na dolinę sprzyjają skupieniu. To tu św. Franciszek usłyszał wezwanie, by odbudować Kościół – i tu dziś pielgrzymi uczą się prostoty.",
+      "Włoskie sanktuaria to także doskonała okazja, by spróbować lokalnej kuchni, spotkać mieszkańców i zobaczyć codzienne życie miast, które od wieków przyjmują pielgrzymów. Podróż staje się wtedy pełniejsza – duchowa i ludzka zarazem.",
+    ],
   },
   {
     id: "post-004",
@@ -37,6 +55,12 @@ export const posts: BlogPost[] = [
     date: "2025-02-14",
     image: "/images/blog/jak-przygotowac-sie-do-pielgrzymki.svg",
     imageAlt: "Plecak, buty i mapa leżące na drewnianym stole",
+    content: [
+      "Przygotowanie do pielgrzymki zaczyna się długo przed wyjazdem. Najpierw warto spokojnie przeczytać program i listę świadczeń, a potem zastanowić się, czego naprawdę potrzebujemy w drodze. Im mniej zbędnych rzeczy, tym lżej – dosłownie i w przenośni.",
+      "Dokumenty to podstawa: paszport ważny co najmniej sześć miesięcy od powrotu, a w Unii Europejskiej wystarczy dowód osobisty. Warto zrobić kopię dokumentów i zdjęć, a pieniądze i dokumenty trzymać w różnych miejscach.",
+      "Bagaż powinien być praktyczny. Wygodne buty, odzież dostosowana do pogody, nakrycie głowy, kurtka przeciwdeszczowa i mała apteczka to absolutne minimum. Do miejsc sakralnych zabieramy strój zakrywający ramiona i kolana.",
+      "Najważniejsze jest jednak przygotowanie serca. Pielgrzymka nie jest wyścigiem ani listą miejsc do odhaczenia. Warto zabrać intencję – jedną, konkretną sprawę, z którą wyruszamy – i pozwolić, by droga zrobiła swoje.",
+    ],
   },
   {
     id: "post-005",
@@ -46,5 +70,11 @@ export const posts: BlogPost[] = [
     date: "2025-01-20",
     image: "/images/blog/camino-droga-ktora-zmienia.svg",
     imageAlt: "Droga do Santiago ze strzałkami szlaku Camino",
+    content: [
+      "Camino de Santiago to jeden z najstarszych szlaków pielgrzymkowych świata. Prowadzi do grobu św. Jakuba w Santiago de Compostela, a jego trasy rozciągają się przez całą Europę. Każdego roku tysiące ludzi wyruszają w drogę z różnych powodów – i prawie wszyscy wracają odmienieni.",
+      "Pielgrzymi zgodnie mówią, że Camino uczy pokory. Nie da się przejść szlaku siłą woli. Deszcz, zmęczenie, bąble na stopach i własne myśli są częścią doświadczenia. Właśnie wtedy, gdy wszystko wydaje się trudne, przychodzi pomoc – od innych pielgrzymów, od gospodarzy schronisk, od ludzi spotkanych po drodze.",
+      "Dla wielu najważniejszy jest rytm: wczesna pobudka, Msza, kilka godzin marszu, odpoczynek, wieczorna modlitwa. Ten prosty porządek dnia porządkuje też myśli. Po powrocie trudno wrócić do starego pośpiechu.",
+      "Nie trzeba od razu planować całego szlaku. Można zacząć od kilku dni, od krótkiego odcinka, od jednej intencji. Camino jest otwarte dla każdego – niezależnie od wieku, kondycji i doświadczenia.",
+    ],
   },
 ];

@@ -4,14 +4,25 @@ import { collection, config, fields } from "@keystatic/core";
  * Konfiguracja Keystatic (CMS nad plikami w repo).
  *
  * Deweloperka (next dev): storage.kind = "local" — zapis do src/content/.
- * Produkcja (Netlify): zamień na:
- *   storage: { kind: "github", repo: "<wlasciciel>/<nazwa-repo>" }
- * i skonfiguruj Keystatic Cloud (logowanie klienta mailem, free do 3 osób).
+ * Produkcja (Netlify): gdy ustawione są zmienne Keystatic Cloud
+ * (KEYSTATIC_GITHUB_CLIENT_ID i KEYSTATIC_GITHUB_CLIENT_SECRET),
+ * włącza się tryb "github" — edycje trafiają jako commity do repozytorium
+ * GitHub, a logowanie klienta obsługuje Keystatic Cloud (darmowe do 3 osób).
+ * Klucze generuje kreator Keystatic przy pierwszym wejściu na /admin
+ * w trybie github (zob. .env.example i https://keystatic.com/docs/github-mode).
+ *
+ * Warunek oparty na obecności kluczy (a nie NODE_ENV), aby produkcyjny
+ * build lokalnie (npm run build) działał bez skonfigurowanego CMS-a.
  */
 export default config({
-  storage: {
-    kind: "local",
-  },
+  storage: process.env.KEYSTATIC_GITHUB_CLIENT_ID
+    ? {
+        kind: "github",
+        repo: "Igorchpolak/St-Christopher",
+      }
+    : {
+        kind: "local",
+      },
   ui: {
     navigation: {
       Treść: ["trips", "posts"],

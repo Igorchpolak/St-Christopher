@@ -1,4 +1,5 @@
 import Footer from "@/components/layout/Footer";
+import HashScroll from "@/components/layout/HashScroll";
 import Header from "@/components/layout/Header";
 
 /**
@@ -22,6 +23,7 @@ export default function SiteLayout({
         {children}
       </main>
       <Footer />
+      <HashScroll />
     </>
   );
 }
