@@ -33,6 +33,7 @@ src/
     site.ts, trips.ts, continents.ts, posts.ts
   lib/
     api.ts              # JEDYNE źródło danych dla komponentów (async, Promise)
+    trips.generated.ts  # AUTO-GENEROWANY indeks wyjazdów (importy statyczne JSON)
     format.ts           # formaty PL (ceny, daty, liczba dni)
     seo.ts              # bazowy URL + JSON-LD (TravelAgency)
     validation.ts       # walidacja formularza kontaktowego
@@ -58,6 +59,14 @@ Komponenty nie importują `src/data` bezpośrednio.
 
 Przejście na backend = podmiana implementacji funkcji w `api.ts` na `fetch`
 (sygnatury: async, zwracają `Promise<T>` – bez zmian w komponentach):
+
+> **Uwaga (Netlify / serverless):** treść wyjazdów jest w produkcji
+> **importowana statycznie** z `src/lib/trips.generated.ts` (generuje go
+> `npm run generate:trip-index`, uruchamiane w `build`). Odczyt plików JSON
+> z dysku w czasie działania nie działa w funkcjach serverless – katalog
+> `src/content/trips` nie trafia do bundlu funkcji. Zmiana treści w panelu
+> `/admin` (tryb github) robi commit do repo, co uruchamia rebuild Netlify
+> i regenerację indeksu.
 
 ```ts
 export async function getAllTrips(): Promise<Trip[]> {

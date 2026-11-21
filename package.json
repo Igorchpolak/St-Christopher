@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "npm run generate:trip-index && next dev",
+    "build": "npm run generate:trip-index && next build",
     "start": "next start",
     "lint": "eslint",
     "generate:placeholders": "tsx scripts/generate-placeholders.ts",
+    "generate:trip-index": "tsx scripts/generate-trip-index.ts",
     "validate:data": "tsx scripts/validate-data.ts"
   },
   "dependencies": {

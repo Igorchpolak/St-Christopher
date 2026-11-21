@@ -1,18 +1,26 @@
-import { createReader } from "@keystatic/core/reader";
 import type { BlogPost, Continent, ContinentId, SiteConfig, Trip } from "@/types";
 import { continents } from "@/data/continents";
 import { posts } from "@/data/posts";
 import { site } from "@/data/site";
-import keystaticConfig from "../../keystatic.config";
+import { tripEntries } from "./trips.generated";
+import { readdirSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 
 /**
  * Warstwa API. Treść wyjazdów pochodzi z CMS Keystatic (pliki JSON w
- * src/content/trips/, edytowane w panelu /admin) i jest czytana przez
- * Reader API. Funkcje z "use cache" pozwalają Next.js prerenderować
- * dane przy buildzie (cacheComponents), więc treść CMS-a jest wklejana
- * statycznie, a każdy zapis w panelu uruchamia rebuild.
+ * src/content/trips/, edytowane w panelu /admin).
+ *
+ * W produkcji treść jest importowana statycznie (src/lib/trips.generated.ts,
+ * generowany przy buildzie przez scripts/generate-trip-index.ts), więc jest
+ * częścią bundlu i działa także przy regeneracji cache w środowisku
+ * serverless (Netlify Functions), gdzie odczyt z dysku katalogu z treścią
+ * nie działa. W dev treść czytana jest z dysku, aby wpisy dodane w panelu
+ * /admin pojawiały się bez restartu serwera.
+ *
+ * Funkcje z "use cache" pozwalają Next.js prerenderować dane przy buildzie
+ * (cacheComponents), więc treść CMS-a jest wklejana statycznie, a każdy
+ * zapis w panelu (commit do repo) uruchamia rebuild.
  */
-const reader = createReader(process.cwd(), keystaticConfig);
 
 interface TripEntry {
   title: string;
@@ -69,19 +77,37 @@ function byStartDate(a: Trip, b: Trip): number {
   return aDate.localeCompare(bDate) || a.title.localeCompare(b.title, "pl");
 }
 
+/**
+ * Wszystkie wpisy wyjazdów: slug + surowe dane z pliku JSON.
+ * Produkcja: statyczne importy z wygenerowanego indeksu (część bundlu).
+ * Dev: odczyt z dysku, aby nowe wpisy z panelu /admin były widoczne
+ * od razu, bez restartu `next dev`.
+ */
+function loadEntries(): Array<{ slug: string; entry: unknown }> {
+  if (process.env.NODE_ENV === "production") {
+    return [...tripEntries];
+  }
+  const dir = join(process.cwd(), "src/content/trips");
+  return readdirSync(dir)
+    .filter((name) => name.endsWith(".json"))
+    .sort((a, b) => a.localeCompare(b, "pl"))
+    .map((name) => ({
+      slug: name.slice(0, -".json".length),
+      entry: JSON.parse(readFileSync(join(dir, name), "utf8")) as unknown,
+    }));
+}
+
 /** Wszystkie wyjazdy z CMS-a, posortowane po terminie. */
 export async function getAllTrips(): Promise<Trip[]> {
   "use cache";
-  const entries = await reader.collections.trips.all();
-  const trips = entries.map(({ slug, entry }) => toTrip(slug, entry as TripEntry));
+  const trips = loadEntries().map(({ slug, entry }) => toTrip(slug, entry as TripEntry));
   return trips.sort(byStartDate);
 }
 
 /** Trips z `featured === true`, posortowane rosnąco po `startDate`. */
 export async function getUpcomingTrips(limit = 3): Promise<Trip[]> {
   "use cache";
-  const entries = await reader.collections.trips.all();
-  const trips = entries
+  const trips = loadEntries()
     .map(({ slug, entry }) => toTrip(slug, entry as TripEntry))
     .filter((trip) => trip.featured)
     .sort(byStartDate)
@@ -92,8 +118,7 @@ export async function getUpcomingTrips(limit = 3): Promise<Trip[]> {
 /** Wyjazdy z danego kontynentu, posortowane po `startDate`. */
 export async function getTripsByContinent(id: ContinentId): Promise<Trip[]> {
   "use cache";
-  const entries = await reader.collections.trips.all();
-  const trips = entries
+  const trips = loadEntries()
     .map(({ slug, entry }) => toTrip(slug, entry as TripEntry))
     .filter((trip) => trip.continent === id)
     .sort(byStartDate);
@@ -103,15 +128,14 @@ export async function getTripsByContinent(id: ContinentId): Promise<Trip[]> {
 /** Pojedynczy wyjazd po slugu (strona szczegółów). */
 export async function getTripBySlug(slug: string): Promise<Trip | null> {
   "use cache";
-  const entry = await reader.collections.trips.read(slug);
-  return entry ? toTrip(slug, entry as TripEntry) : null;
+  const found = loadEntries().find((item) => item.slug === slug);
+  return found ? toTrip(found.slug, found.entry as TripEntry) : null;
 }
 
 /** Slugi wszystkich wyjazdów (generateStaticParams). */
 export async function getAllTripSlugs(): Promise<string[]> {
   "use cache";
-  const entries = await reader.collections.trips.all();
-  return entries.map(({ slug }) => slug);
+  return loadEntries().map(({ slug }) => slug);
 }
 
 // TODO: kontynenty i wpisy blogowe podpiąć pod CMS analogicznie do trips.
