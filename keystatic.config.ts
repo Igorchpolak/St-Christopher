@@ -3,26 +3,27 @@ import { collection, config, fields } from "@keystatic/core";
 /**
  * Konfiguracja Keystatic (CMS nad plikami w repo).
  *
- * Deweloperka (next dev): storage.kind = "local" — zapis do src/content/.
- * Produkcja (Netlify): gdy ustawione są zmienne Keystatic Cloud
- * (KEYSTATIC_GITHUB_CLIENT_ID i KEYSTATIC_GITHUB_CLIENT_SECRET),
- * włącza się tryb "github" — edycje trafiają jako commity do repozytorium
- * GitHub, a logowanie klienta obsługuje Keystatic Cloud (darmowe do 3 osób).
- * Klucze generuje kreator Keystatic przy pierwszym wejściu na /admin
- * w trybie github (zob. .env.example i https://keystatic.com/docs/github-mode).
+ * Panel /admin to komponent kliencki, więc ta konfiguracja jest oceniana
+ * także w przeglądarce — a przeglądarka widzi wyłącznie zmienne NEXT_PUBLIC_*
+ * (zwykłe process.env.* są tam puste). Dlatego tryb storage przełącza
+ * publiczna zmienna NEXT_PUBLIC_KEYSTATIC_MODE, a nie sama obecność klucza.
  *
- * Warunek oparty na obecności kluczy (a nie NODE_ENV), aby produkcyjny
- * build lokalnie (npm run build) działał bez skonfigurowanego CMS-a.
+ * NEXT_PUBLIC_KEYSTATIC_MODE=github → tryb "github": edycje trafiają jako
+ * commity do repozytorium GitHub (Netlify: Site settings → Environment
+ * variables). Wymaga też: KEYSTATIC_GITHUB_CLIENT_ID,
+ * KEYSTATIC_GITHUB_CLIENT_SECRET, KEYSTATIC_SECRET oraz
+ * NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG (zob. .env.example).
+ *
+ * Bez tej zmiennej → tryb "local" (zapis do src/content/ przy `next dev`),
+ * dzięki czemu produkcyjny build (`npm run build`) działa bez
+ * skonfigurowanego CMS-a. Kreator pierwszej konfiguracji (tryb github bez
+ * kluczy): uruchom dev i wejdź na /admin/setup.
  */
 export default config({
-  storage: process.env.KEYSTATIC_GITHUB_CLIENT_ID
-    ? {
-        kind: "github",
-        repo: "Igorchpolak/St-Christopher",
-      }
-    : {
-        kind: "local",
-      },
+  storage:
+    process.env.NEXT_PUBLIC_KEYSTATIC_MODE === "github"
+      ? { kind: "github", repo: "Igorchpolak/St-Christopher" }
+      : { kind: "local" },
   ui: {
     navigation: {
       Treść: ["trips", "posts"],
