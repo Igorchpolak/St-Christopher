@@ -3,27 +3,30 @@ import { collection, config, fields } from "@keystatic/core";
 /**
  * Konfiguracja Keystatic (CMS nad plikami w repo).
  *
- * Panel /admin to komponent kliencki, więc ta konfiguracja jest oceniana
- * także w przeglądarce — a przeglądarka widzi wyłącznie zmienne NEXT_PUBLIC_*
- * (zwykłe process.env.* są tam puste). Dlatego tryb storage przełącza
- * publiczna zmienna NEXT_PUBLIC_KEYSTATIC_MODE, a nie sama obecność klucza.
+ * Tryb storage jest na sztywno "local": panel zapisuje pliki bezpośrednio
+ * do src/content/ i działa wyłącznie przy `next dev`. Edycja treści wygląda
+ * tak: panel na http://localhost:3000/keystatic → zapis → commit i push
+ * do GitHub → rebuild Netlify → strona się aktualizuje.
  *
- * NEXT_PUBLIC_KEYSTATIC_MODE=github → tryb "github": edycje trafiają jako
- * commity do repozytorium GitHub (Netlify: Site settings → Environment
- * variables). Wymaga też: KEYSTATIC_GITHUB_CLIENT_ID,
- * KEYSTATIC_GITHUB_CLIENT_SECRET, KEYSTATIC_SECRET oraz
- * NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG (zob. .env.example).
+ * Dlaczego nie warunek na process.env (tryb "github" na produkcji):
+ *  1. Konfiguracja jest oceniana także w przeglądarce (panel to komponent
+ *     kliencki), a odwołanie process.env bez wartości inline powoduje
+ *     w bundlu klienta zależność od polifillu `process`, którego chunk
+ *     nie jest ładowany — moduł konfiguracji wybucha przy imporcie i panel
+ *     milcząco się nie renderuje (pusta strona).
+ *  2. Sam tryb "github" na Next 16 jest dotknięty bugiem Keystatic #1549
+ *     (https://github.com/Thinkmill/keystatic/issues/1549): UI w tym trybie
+ *     renderuje się jako pusta strona (zbadane na Next 16.4.6, dev i prod).
  *
- * Bez tej zmiennej → tryb "local" (zapis do src/content/ przy `next dev`),
- * dzięki czemu produkcyjny build (`npm run build`) działa bez
- * skonfigurowanego CMS-a. Kreator pierwszej konfiguracji (tryb github bez
- * kluczy): uruchom dev i wejdź na /admin/setup.
+ * Po naprawie #1549 wystarczy zmienić storage na:
+ *   { kind: "github", repo: "Igorchpolak/St-Christopher" }
+ * i ustawić zmienne z .env.example (KEYSTATIC_GITHUB_CLIENT_ID itd.)
+ * w Netlify.
  */
 export default config({
-  storage:
-    process.env.NEXT_PUBLIC_KEYSTATIC_MODE === "github"
-      ? { kind: "github", repo: "Igorchpolak/St-Christopher" }
-      : { kind: "local" },
+  storage: {
+    kind: "local",
+  },
   ui: {
     navigation: {
       Treść: ["trips", "posts"],

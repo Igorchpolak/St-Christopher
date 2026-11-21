@@ -64,9 +64,25 @@ Przejście na backend = podmiana implementacji funkcji w `api.ts` na `fetch`
 > **importowana statycznie** z `src/lib/trips.generated.ts` (generuje go
 > `npm run generate:trip-index`, uruchamiane w `build`). Odczyt plików JSON
 > z dysku w czasie działania nie działa w funkcjach serverless – katalog
-> `src/content/trips` nie trafia do bundlu funkcji. Zmiana treści w panelu
-> `/admin` (tryb github) robi commit do repo, co uruchamia rebuild Netlify
-> i regenerację indeksu.
+> `src/content/trips` nie trafia do bundlu funkcji. Zmiana treści robi
+> commit do repo, co uruchamia rebuild Netlify i regenerację indeksu.
+
+## Panel CMS (Keystatic)
+
+- Panel pod **`/keystatic`** (Keystatic ma tę ścieżkę zakodowaną na stałe —
+  montowanie pod innym adresem, np. `/admin`, daje w panelu „Not found”).
+- Tryb `local` (wpisany na sztywno w `keystatic.config.ts`): panel działa
+  przy `npm run dev` → `http://localhost:3000/keystatic` i zapisuje pliki
+  w `src/content/`. Publikacja: commit + push do GitHub (rebuild Netlify).
+- W produkcji panel jest wyłączony (komunikat z instrukcją) — tryb „github”
+  (edycja bezpośrednio na serwerze) jest dotąd zepsuty upstream:
+  [Thinkmill/keystatic#1549](https://github.com/Thinkmill/keystatic/issues/1549).
+- Drobne pułapki deweloperskie:
+  - Next 16 dev blokuje zasoby dla „obcych” originów, a Keystatic
+    przekierowuje panel na `127.0.0.1` — w `next.config.ts` musi zostać
+    `allowedDevOrigins: ["127.0.0.1"]`.
+  - Nie definiuj trybu storage przez `process.env` w `keystatic.config.ts` —
+    odwołanie bez wartości inline łamie montowanie panelu w przeglądarce.
 
 ```ts
 export async function getAllTrips(): Promise<Trip[]> {

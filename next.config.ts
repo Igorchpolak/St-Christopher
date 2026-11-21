@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
+  // Panel Keystatic w dev działa na 127.0.0.1 (RedirectToLoopback w Keystatic),
+  // a Next 16 blokuje zasoby deweloperskie dla „obcych" originów.
+  allowedDevOrigins: ["127.0.0.1"],
   cacheComponents: true,
   partialPrefetching: true,
   images: {
